@@ -1,0 +1,17 @@
+/* 获取配置文件 */
+import {VERSION} from '../../../config/config'
+
+Page({
+
+	/**
+	 * 页面的初始数据
+	 */
+	data: {
+		version: VERSION
+	},
+
+	/**
+	 * 生命周期函数--监听页面加载
+	 */
+	onLoad: function (_options) {},
+})

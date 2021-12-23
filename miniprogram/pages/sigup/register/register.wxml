@@ -1,0 +1,34 @@
+<view class="login-type">
+    <text>绑定手机号码</text>
+</view>
+
+
+<view class="login">
+    <input class="input" type="text" value="{{phone}}" maxlength="11" bind:input="changePhone" placeholder="请输入手机号"
+        bindblur="verifyPhone" />
+    <view class="qr-code">
+        <input class="qr-input" type="text" value="{{msg}}" maxlength="6" bind:input="changeCode" placeholder="请输入验证码"
+            bindblur="verifyCode" />
+        <text class="code" wx:if="{{isCode}}" bindtap="getCode">获取验证码</text>
+        <block wx:if="{{!isCode}}">
+            <van-count-down use-slot time="{{ time }}" bind:change="onChange" bind:finish="finish">
+                <text class="code">{{ timeData.seconds }}后重新获取</text>
+            </van-count-down>
+        </block>
+    </view>
+</view>
+
+<view class="btn-grou">
+    <text bindtap="register" class="{{verCode&&verPhone&&checked?'active':''}}">确定</text>
+</view>
+
+<view class="aggrent">
+    <van-checkbox icon-size="32rpx" checked-color="rgba(255, 201, 26, 1)" value="{{ checked }}"
+        bind:change="aggreements">阅读并同意《服务协议》和《隐私政策》</van-checkbox>
+</view>
+
+<view class="btn-grou" style="position: fixed;bottom: 0;left: 0;" wx:if="{{false}}">
+    <button class="active" open-type="getPhoneNumber" bindgetphonenumber="getPhone">获取手机号码</button>
+</view>
+
+<tips content="号码已存在，是否关联当前账户？" show="{{show}}" bind:confirm="confirm" />

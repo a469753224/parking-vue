@@ -1,0 +1,119 @@
+<!--pages/homes/orderDetail/orderDetail.wxml-->
+
+<view class="header" />
+
+<view class="title">
+    <text>以下是您此次使用的费用</text>
+</view>
+
+<view class="atcr" />
+
+<view class="pay-content">
+
+    <text class="total-time-title">总使用时长</text>
+
+    <text class="total-time">{{bill.times}}</text>
+
+    <view class="time">
+        <view class="time-item">
+            <text>{{bill.benginResver}}</text>
+            <text>开始预留</text>
+        </view>
+        <view class="time-item active">
+            <text>{{bill.timeouts}}</text>
+            <text>超时</text>
+        </view>
+        <view class="time-item">
+            <text>{{bill.payTime}}</text>
+            <text>取车</text>
+        </view>
+    </view>
+
+    <view class="park-info">
+        <view class="park-item">
+            <text>车位编号</text>
+            <text>{{bill.placeNumbering}}</text>
+        </view>
+        <view class="park-item">
+            <text>车锁编号</text>
+            <text>{{bill.lockerId}}</text>
+        </view>
+        <view class="park-item">
+            <text>车牌号码</text>
+            <text>{{bill.plate}}</text>
+        </view>
+        <view class="park-item">
+            <text>具体地址</text>
+            <text>{{bill.placeAddress}}</text>
+        </view>
+    </view>
+
+    <view class="line">
+        <text />
+    </view>
+
+    <view class="price">
+        <view class="price-item">
+            <view>
+                <text>原定费用</text>
+            </view>
+            <text class="number">￥{{bill.pay}}</text>
+        </view>
+        <view class="price-item">
+            <view>
+                <text>超时费用</text>
+            </view>
+            <text class="number">￥{{bill.timeoutCost?bill.timeoutCost:0}}</text>
+        </view>
+        <view class="price-item color">
+            <view>
+                <text>停车卡抵扣</text>
+            </view>
+            <text class="number color">-￥{{bill.discount}}</text>
+        </view>
+    </view>
+
+    <view class="pay-total">
+        <text>合计</text>
+        <view class="total-price">
+            <text class="total-price-sign">￥</text>
+            <text class="total-number">{{bill.realPay}}</text>
+        </view>
+    </view>
+
+    <view class="service">
+        <text>对此订单有疑问？</text>
+        <view class="customer-service" bindtap="refund">
+            <image class="service-image" src="/assets/images/home/back_money@2x.png" />
+            <text>退款申请</text>
+        </view>
+        <view class="customer-service" bindtap="call">
+            <image class="service-image" src="/assets/images/home/service@2x.png" />
+            <text>联系客服</text>
+        </view>
+    </view>
+
+</view>
+
+<view class="pay-info">
+    <text class="pay-info-title">订单信息</text>
+    <view class="pay-info-item">
+        <text>订单编号</text>
+        <text class="mar-l">{{bill.orderNumbering}}</text>
+    </view>
+    <view class="pay-info-item">
+        <text>创建时间</text>
+        <text class="mar-l">{{bill.creatTime}}</text>
+    </view>
+    <view class="pay-info-item">
+        <text>支付方式</text>
+        <text class="mar-l">{{bill.payChannel}}</text>
+    </view>
+    <view class="pay-info-item">
+        <text>支付时间</text>
+        <text class="mar-l">{{bill.payTime}}</text>
+    </view>
+</view>
+
+<contact show="{{show}}" />
+<tips content="退款申请请移步“榴车位APP”内操作，目前小程序不提供该服务，感谢您的理解！" showCancel="{{false}}" show="{{shows}}" />

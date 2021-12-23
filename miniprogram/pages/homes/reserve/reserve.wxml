@@ -1,0 +1,99 @@
+<view class="cell-warp">
+    <view class="cell"><text>停车时间</text><text class="grey">{{beTime}}</text></view>
+</view>
+
+<view class="cell-warp">
+    <picker mode="time" value="{{enTime}}" bindchange="bindTimeChange" start="{{beTime}}">
+        <view class="cell"><text>取车时间</text>
+            <view class="arrow-bar grey-2"><text>{{enTime}}</text>
+                <van-icon name="arrow" size="28rpx" color="rgba(153, 153, 153, 1)" />
+            </view>
+        </view>
+    </picker>
+</view>
+
+<view class="cell-warp">
+    <view class="cell nob" bindtap="selectPlate">
+        <text>车牌</text>
+        <view class="arrow-bar">
+            <text class="orange">{{plate?plate:'选择车牌号'}}</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+</view>
+
+<view class="cell-warp margin">
+    <view class="cell nob">
+        <text>开放时间</text>
+        <text>{{reserve.beginTime}}-{{reserve.endTime}}</text>
+    </view>
+</view>
+
+<view class="tips">
+    <text class="title">计费规则</text>
+    <view class="content">
+        <rich-text nodes="{{reserve.tipInfo}}" />
+    </view>
+</view>
+
+<view class="tips">
+    <text class="title">温馨提示</text>
+    <view class="content">
+        <text>a.车辆底盘限高>9cm； </text>
+        <view>b.<text class="orange">特别注意</text>：请在解锁后<text class="orange">5分钟内将车辆停好</text>，否则车位锁将会自动升起，若未及时停车，请重新扫码停车；</view>
+        <text>c.提前预留车位：预留成功即开始计费，按照车场计费规则收取；车位将保留30分钟，超时仍未开锁将自动取消订单</text>
+    </view>
+</view>
+
+<!-- <view class="btn-group">
+    <button bindtap="wxScanOrder">下单解锁</button>
+</view> -->
+
+<!-- <view class="btn-group">
+    <view class="deposit">
+        <view class="deposit-left">
+            <view class="deposit-desc">
+                <view class="pay-title">
+                    <image class="deposit-image" mode="aspectFit" src="/assets/images/home/balance@2x.png" />
+                    <image class="author-image" src="/assets/images/user/author@2x.png" />
+                    <text class="deposit-title">停车先付18元</text>
+                    <view class="deposit-author">
+                        <view>
+                            <image class="author-image" src="/assets/images/user/author@2x.png"/>
+                            <text>微信支付分</text>
+                        </view>
+                        <text class="author-bar">|</text>
+                        <text>550分及以上优享</text>
+                    </view>
+                </view>
+                <view class="deposit-text">
+                    <text>每次停车离开车位后，</text>
+                    <text class="orange">10秒内系统自动结算，多付费用原路退回；</text>
+                    <text>月卡用户免先付款</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <button bindtap="wxScanOrder">下单解锁</button>
+    <button bindtap="beforPay">先停后付</button>
+</view> -->
+
+<view class="pay-btn-group">
+    <view class="pay-deposit" bindtap="wxScanOrder">
+        <view class="pay-btn-content">
+            <text class="pay-title">停车先付18元(月卡免）</text>
+            <text class="pay-desc">停车结束后10秒内剩余费用原路退回</text>
+        </view>
+        <van-icon name="arrow" class="icon" size="16" color="rgb(51,51,51)" />
+    </view>
+    <view class="btn-author" bindtap="beforPay">
+        <text>免押金停车</text>
+        <van-icon name="arrow" class="icon" size="16" color="rgb(255,255,255)" />
+    </view>
+    <view class="author-desc">
+        <image class="author-image" src="/assets/images/user/author@2x.png" />
+        <text>微信支付分</text>
+        <text class="author-bar">|</text>
+        <text>550分及以上优享</text>
+    </view>
+</view>

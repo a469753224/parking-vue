@@ -1,0 +1,14 @@
+<!--pages/homes/successSettlement/successSettlement.wxml-->
+
+<view class="order-cancel">
+    <image class="right" src="/assets/images/home/right@2x.png"/>
+    <text class="title">已结算</text>
+    <view class="tips">
+        <text>15分钟内免费，此次停车费用为0</text>
+    </view>
+</view>
+
+<view class="btn-group">
+    <text bindtap="backHome">返回首页</text>
+</view>
+

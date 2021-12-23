@@ -1,0 +1,18 @@
+<!--pages/users/aboutus/aboutus.wxml-->
+<view class="version-info">
+	<image class="version-image" src="/assets/images/user/logo@2x.png" />
+	<text class="version-name">榴车位</text>
+	<text class="version-no">v{{version}}</text>
+</view>
+
+<view class="content">
+	<view class="paragraph">
+		<text>榴车位小程序是广西解生活网络科技有限公司开发的一款社区私家车位分享互助类服务应用， 通过社区私家车位的智能化管理，提高停车资源利用率， 为社区居民提供错时停车服务，建设邻里友好的社区氛围；
+			为社会增加停车资源,实现物尽其用的公司理念。</text>
+		<text>有停车需求的用户可以快速查询和预留空置车位， 提高停车效率； 私家车位主可以随时出租空置时段，增加车位收益，提高私家车位的利用率。 榴车位为您提供贴心、优质的停车预留服务。</text>
+	</view>
+</view>
+
+<view class="phone">
+	<text>联系电话:13407715858</text>
+</view>

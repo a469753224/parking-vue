@@ -1,0 +1,15 @@
+<!--pages/homes/fail/fail.wxml-->
+<view class="pay-fail">
+    <image class="waring" src="/assets/images/home/warning@2x.png" />
+    <text class="pay-status">支付失败</text>
+</view>
+
+<view class="empty">
+    <image class="pay-fail-image" src="/assets/images/home/pay_fail@2x.png" />
+    <text class="pay-desc">若您已付款请立即反馈给客服</text>
+</view>
+
+<view class="btn-group"> 
+    <text class="btn default" bindtap="readOrder">查看订单</text>
+    <text class="btn active" bindtap="erPay">重新支付</text>
+</view>

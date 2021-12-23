@@ -1,0 +1,34 @@
+/* pages/releases/step/step.wxss */
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100vw;
+  height: 160rpx;
+  padding: 36rpx 24rpx;
+  box-sizing: border-box;
+}
+
+.step-image {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 16rpx 0 0;
+  flex-shrink: 0;
+}
+
+.step-tips {
+  display: flex;
+  flex-direction: column;
+}
+
+.no {
+  font-size: 32rpx;
+  color: rgba(51, 51, 51, 1);
+  margin: 0 0 8rpx;
+  line-height: 44rpx;
+}
+
+.desc{
+  font-size: 26rpx;
+  color: rgba(51, 51, 51, 1);
+}

@@ -1,0 +1,108 @@
+/* pages/users/wallet/wallet.wxss */
+
+.wallet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 702rpx;
+  height: 396rpx;
+  border-radius: 20rpx;
+  margin: 40rpx 24rpx 50rpx;
+  background-color: rgba(255, 217, 26, 1);
+}
+
+.wallet-total {
+  display: flex;
+  align-items: center;
+  width: 654rpx;
+  height: 158rpx;
+  margin: 24rpx 0 0;
+  padding: 24rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx 20rpx 0 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.wallet-total view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.wallet-total-desc {
+  font-size: 26rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.money {
+  font-size: 48rpx;
+  color: rgba(255, 179, 26, 1);
+  margin: 8rpx 0 0;
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 64rpx 0 0;
+}
+
+.left,.right {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+  padding: 0 0 0 24rpx;
+  box-sizing: border-box;
+}
+
+.info-money {
+  font-size: 32rpx;
+  margin: 8rpx 0 0;
+  color: rgba(43, 34, 24, 1);
+}
+
+.recharge-history {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96rpx;
+  width: 702rpx;
+  margin: 26rpx 24rpx 0;
+  box-sizing: border-box;
+}
+
+.wallet-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 16rpx 0 0;
+}
+
+.history-title {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  box-sizing: border-box;
+}
+
+.history-title .title {
+  font-size: 40rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.flex-left {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.flex-left text {
+  margin: 0 10rpx 0 0;
+}
+
+.card-list {
+  margin: 0 0 20rpx;
+}

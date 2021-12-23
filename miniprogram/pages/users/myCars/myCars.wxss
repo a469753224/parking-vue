@@ -1,0 +1,153 @@
+/* pages/users/myCards/myCards.wxss */
+
+page {
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.car-back {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 436rpx;
+  background-color: rgba(255, 217, 26, 1);
+}
+
+.tips {
+  position: absolute;
+  bottom: 24rpx;
+  left: 24rpx;
+  color: rgba(43, 34, 24, 1);
+  font-size: 26rpx;
+}
+
+.car-back image {
+  width: 200rpx;
+  height: 200rpx;
+  object-fit: cover;
+}
+
+.car-list {
+  margin: 24rpx 0 0;
+  background-color: rgb(255,255,255);
+  padding: 0 0 150rpx;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 200rpx 0 0;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.default-car {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vw;
+  height: 120rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid rgb(245,245,245);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.car-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 16rpx 0 24rpx;
+}
+
+.car-first {
+  margin: 0 16rpx 0 0;
+}
+
+.default-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80rpx;
+  height: 40rpx;
+  font-size: 22rpx;
+  border-radius: 10rpx;
+  margin: 0 24rpx 0 0;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(72, 199, 139, 1);
+}
+
+.cell {
+  border-bottom: 1rpx solid rgb(250,250,250);
+}
+
+.left,.right {
+  height: 120rpx;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.car-info {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.detele-car {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108rpx;
+  height: 120rpx;
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 83, 26, 1);
+}
+
+.set-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108rpx;
+  height: 120rpx;
+  font-size: 22rpx;
+  color: rgba(153, 153, 153, 1);
+  background-color: rgba(245, 245, 245, 1);
+
+}
+
+.btn-group {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 0 0 48rpx;
+  background-color: rgb(255,255,255);
+}
+
+.btn-group  text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 702rpx;
+  height: 96rpx;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  color: rgba(43, 34, 24, 1);
+  background-color: rgba(255, 201, 26, 1);
+}

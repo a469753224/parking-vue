@@ -1,0 +1,15 @@
+<view class="overlay" wx:if="{{show}}">
+	<view class="tips">
+		<text class="title">{{title}}</text>
+		<text class="content">{{content}}</text>
+		<view class="btn-group">
+			<text class="btn cancel" bindtap="cancel" wx:if="{{showCancel}}">{{cancelText}}</text>
+			<block wx:if="{{!slotBtn}}">
+				<text class="btn confirm" bindtap="confirm">{{confirmText}}</text>
+			</block>
+			<block wx:if="{{slotBtn}}">
+				<slot />
+			</block>
+		</view>
+	</view>
+</view>

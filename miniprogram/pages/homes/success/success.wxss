@@ -1,0 +1,114 @@
+/* pages/homes/success/success.wxss */
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 272rpx;
+  z-index: 77;
+}
+
+.header:after {
+  width: 140%;
+  height: 272rpx;
+  position: absolute;
+  left: -20%;
+  top: 0;
+  z-index: -1;
+  content: '';
+  border-radius: 0 0 50% 50%;
+  background-image: linear-gradient(rgba(255, 217, 26, 1), rgba(255, 234, 128, 1));
+}
+
+.right {
+  width: 64rpx;
+  height: 64rpx;
+  flex-shrink: 0;
+  margin: 0 0 16rpx;
+}
+
+.pay-money {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48rpx 0;
+}
+
+.sign {
+  font-size: 48rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.money {
+  font-size: 80rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.pay-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 64rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8rpx 0;
+}
+
+.label {
+  font-size: 30rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.subtitle {
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  margin: 62rpx 0 24rpx;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 310rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  border-width: 2rpx;
+  border-style: solid;
+}
+
+.default {
+  color: rgba(255, 179, 26, 1);
+  border-color: rgba(255, 201, 26, 1);
+}
+
+.active {
+  color: rgba(43, 34, 24, 1);
+  border-color: rgba(255, 201, 26, 1);
+  background-color: rgba(255, 201, 26, 1);
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-image {
+  width: 670rpx;
+  height: 180rpx;
+  object-fit: cover;
+}

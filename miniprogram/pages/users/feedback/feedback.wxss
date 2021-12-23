@@ -1,0 +1,39 @@
+/* pages/users/feedback/feedback.wxss */
+
+page {
+	background-color: rgba(245, 245, 245, 1);
+}
+
+.textarea {
+	width: 702rpx;
+	height: 422rpx;
+	margin: 24rpx;
+	padding: 24rpx;
+	font-size: 28rpx;
+	border-radius: 10rpx;
+	box-sizing: border-box;
+	background-color: rgb(255,255,255);
+}
+
+.btn-group {
+	position: fixed;
+	left: 0;
+	bottom: 48rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 96rpx;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 702rpx;
+	height: 96rpx;
+	font-size: 32rpx;
+	border-radius: 10rpx;
+	color: rgba(43, 34, 24, 1);
+	background-color: rgba(255, 201, 26, 1);
+}

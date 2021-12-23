@@ -1,0 +1,12 @@
+.clum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+text {
+  margin: 0 0 10rpx;
+  font-size: 32rpx;
+  color: orangered;
+}

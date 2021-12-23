@@ -1,0 +1,120 @@
+<!--pages/homes/order/order.wxml-->
+<view class="cost">
+    <text class="company">停车费用(￥)</text>
+    <text class="price">{{order.currentExpenses}}</text>
+    <text class="times">{{order.total}}</text>
+    <text class="park">停车时长</text>
+</view>
+
+<view class="order-container">
+
+    <view class="cell-title">
+        <text class="title">车位信息</text>
+    </view>
+
+    <view class="cell-warp">
+        <view class="cell">
+            <text class="sub-title">车位编号</text>
+            <text class="sub-title">车牌号</text>
+        </view>
+
+        <view class="cell">
+            <text>{{order.placeNumbering}}</text>
+            <text>{{order.plate}}</text>
+        </view>
+    </view>
+
+    <view class="cell-warp">
+        <view class="cell">
+            <text class="sub-title">车锁编号</text>
+            <!-- <text class="sub-title">计费规则</text> -->
+        </view>
+
+        <view class="cell">
+            <text>{{order.lockerId}}</text>
+            <!-- <text wx:if="{{order.expenseType == 1}}">￥{{order.billingRules}}/15分钟</text> -->
+            <!-- <text wx:else>{{order.billingRules}}元/起</text> -->
+        </view>
+    </view>
+
+    <view class="cell-warp">
+        <view class="cell">
+            <text class="sub-title">车场名称</text>
+            <text class="sub-title">详细地址</text>
+        </view>
+
+        <view class="cell">
+            <text>{{order.street}}</text>
+            <text>{{order.placeAddress}}</text>
+        </view>
+    </view>
+
+    <view class="cell-title">
+        <text class="title">预留时间</text>
+    </view>
+
+    <view class="cell-warp">
+        <view class="cell">
+            <text class="sub-title">停车时间</text>
+            <text class="sub-title">取车时间</text>
+        </view>
+
+        <view class="cell">
+            <text>{{sTime}}</text>
+            <text>{{gTime}}</text>
+        </view>
+    </view>
+
+</view>
+
+<view class="btn-group" wx:if="{{order.state == 1}}">
+    <block wx:if="{{disable}}">
+        <!-- <text class="cancel disable">取消预留</text> -->
+        <text class="confirm disable">解锁停车</text>
+    </block>
+    <block wx:else>
+        <!-- <text class="cancel" bindtap="cancelOrder">取消预留</text> -->
+        <text class="confirm" bindtap="confirmUnLock">解锁停车</text>
+    </block>
+</view>
+
+<view class="btn-group" wx:if="{{order.state == 2}}">
+    <picker disabled="{{!isContinu && order.state != 2}}" mode="time" value="{{sTime}}" start="{{gTime}}"
+        bind:change="onChangeGetTime" header-text="请选择取车时间">
+        <view class="cancel {{!isContinu && order.state != 2 ? 'disabled' : ''}}">续时</view>
+    </picker>
+    <!-- <view class="confirm" bindtap="settlement">立即结算</view> -->
+</view>
+
+<!-- 解锁停车 -->
+<view class="overlay" wx:if="{{showUnlock}}">
+    <view class="modal">
+        <text class="modal-title">提示</text>
+        <view class="modal-content">
+            <text>·请到达车位后解锁</text>
+            <view>·解锁后车锁未感应到车辆,将于<text class="orange">5分钟</text>后上锁,请及时将车辆停好</view>
+            <text>·若解锁后未及时停车,请重新预留车位</text>
+        </view>
+        <view class="modal-btn-group">
+            <text class="modal-cancel" bindtap="cancel">取消</text>
+            <text class="modal-confirm" bindtap="carLock">解锁</text>
+        </view>
+    </view>
+</view>
+
+
+<!-- 取消预留 -->
+<view class="overlay" wx:if="{{showCan}}">
+    <view class="modal">
+        <text class="modal-title">确定要取消预留吗？</text>
+        <view class="modal-content center">
+            <text>取消预留后不可恢复</text>
+        </view>
+        <view class="modal-btn-group">
+            <text class="modal-cancel" bindtap="cancel">取消</text>
+            <text class="modal-confirm" bindtap="cancelPaking">确定</text>
+        </view>
+    </view>
+</view>
+
+<tips content="{{content}}" showCancel="{{false}}" show="{{show}}" />

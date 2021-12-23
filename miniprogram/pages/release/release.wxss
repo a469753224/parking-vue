@@ -1,0 +1,77 @@
+/* pages/release/release.wxss */
+
+.header {
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 40rpx;
+  color: rgba(51, 51, 51, 1);
+  margin: 0 0 8rpx;
+}
+
+.break {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step {
+  font-size: 26rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.my-park {
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.swiper-warp {
+  width: 714rpx;
+  height: 437rpx;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.swiper-warp image,.item{
+  width: 714rpx;
+  height: 421rpx;
+  object-fit: cover;
+}
+
+.swiper-warp .wx-swiper-dots.wx-swiper-dots-horizontal{
+  bottom: 0;
+}
+.swiper-warp .wx-swiper-dot{
+  width:8rpx;
+  height: 8rpx; 
+  border-radius: 8rpx;
+  flex-shrink: 0;
+}
+
+.swiper-warp .wx-swiper-dot-active{
+  width:24rpx;
+  height: 8rpx; 
+  border-radius: 8rpx;
+  flex-shrink: 0;
+}
+
+.btn-group {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 208rpx 0 0;
+}
+
+.btn-group .btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 328rpx;
+   height: 96rpx;
+   border-radius: 48rpx;
+   font-size: 32rpx;
+   color: rgba(43, 34, 24, 1);
+   background-color: rgba(255, 201, 26, 1);
+}

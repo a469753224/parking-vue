@@ -1,0 +1,144 @@
+/* pages/releases/position/position.wxss */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.search-warp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 80rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  box-shadow: 0 5rpx 5rpx 0 rgb(0,0,0,.3);
+}
+
+.select-city {
+  display: flex;
+  align-items: center;
+  margin: 0 45rpx 0 0;
+  flex-shrink: 0;
+}
+
+.arrow-down {
+  width: 28rpx;
+  height: 14rpx;
+  margin: 0 0 0 18rpx;
+  transition: .35s all;
+}
+
+.active {
+  transform: rotate(-180deg);
+}
+
+.city {
+  font-size: 26rpx;
+  color: rgba(51, 51, 51, 1);
+  margin: 0 18rpx 0 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 54rpx;
+  padding: 0 24rpx;
+  border-radius: 27rpx;
+  box-sizing: border-box;
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.search-icon {
+  width: 27rpx;
+  height: 28rpx;
+  flex-shrink: 0;
+  margin: 0 14rpx 0 0;
+}
+
+.search-input {
+  width: 100%;
+  height: 54rpx;
+  font-size: 26rpx;
+}
+
+.placeholder {
+  font-size: 26rpx;
+  color: rgba(204, 204, 204, 1);
+}
+
+.cancel {
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  margin: 0 0 0 23rpx;
+  flex-shrink: 0;
+}
+
+.map,.map-view {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.my-position {
+  position: absolute;
+  top: 47%;
+  right: 17rpx;
+  width: 91rpx;
+  height: 91rpx;
+  z-index: 7777;
+}
+
+.street-list {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 570rpx;
+  overflow-y: auto;
+  background-color: rgb(255,255,255);
+}
+
+.cell {
+  display: flex;
+  align-items: flex-start;
+  width: 100vw;
+  height: 114rpx;
+  padding: 0 24rpx 0 0;
+  box-sizing: border-box;
+}
+
+.position-icon {
+  width: 24rpx;
+  height: 24rpx;
+  flex-shrink: 0;
+  margin: 24rpx 0 0 24rpx;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 114rpx;
+  width: 100%;
+  padding: 16rpx 14rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid rgba(242, 242, 242, 1);
+}
+
+.title {
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.desc{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+

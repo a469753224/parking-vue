@@ -1,0 +1,136 @@
+/* pages/homes/reserve/reserve.wxss */
+
+page {
+  background-color: rgb(240,240,240);
+}
+
+.cell-warp {
+  padding: 0 24rpx;
+  background-color: rgb(255,255,255);
+}
+
+.margin {
+  margin: 24rpx 0 0;
+}
+
+.nob {
+  border: none !important;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96rpx;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  border-bottom: 1rpx solid rgba(221, 221, 221, 1);
+}
+
+.arrow-bar {
+  display: flex;
+  align-items: center;
+}
+
+.ruls {
+  margin: 24rpx 0 0;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  margin: 48rpx 0 0;
+  padding: 0 24rpx;
+}
+
+.title {
+  color: rgba(51, 51, 51, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  margin: 24rpx 0 0;
+  color: rgba(153, 153, 153, 1);
+}
+
+.grey {
+  color: rgba(204, 204, 204, 1);
+}
+
+.grey-2 {
+  color: rgba(102, 102, 102, 1);
+}
+
+.orange {
+  color: rgba(255, 83, 25, 1);
+}
+
+.btn-group {
+  position: fixed;
+  bottom: 64rpx;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 88rpx;
+}
+
+.btn-group button {
+  width: 702rpx;
+  height: auto;
+  font-size: 32rpx;
+  border: none;
+  border-radius: 10rpx;
+  font-weight: bold;
+  background-color: rgba(255, 201, 25, 1);
+}
+
+.deposit {
+  position: fixed;
+  bottom: 184rpx;
+  left: 24rpx;
+  right: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 702rpx;
+  height: 104rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  background-color: rgba(255, 250, 231, 1);
+  border: 2rpx solid rgba(255, 201, 25, 1);
+}
+
+.deposit-left {
+  display: flex;
+  align-items: center;
+}
+
+.deposit-desc {
+  display: flex;
+  flex-direction: column;
+  margin: 0 24rpx;
+}
+
+.deposit-title {
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.deposit-text {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+  margin:8rpx 0 0;
+}
+
+.deposit-image {
+  width: 48rpx;
+  height: 48rpx;
+}

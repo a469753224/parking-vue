@@ -1,0 +1,48 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "收支详情",
+                    "pathName": "pages/users/reveExpen/reveExpen",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "收益统计",
+                    "pathName": "pages/releases/placeRent/placeRent",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "余额提现",
+                    "pathName": "pages/users/withdrawal/withdrawal",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "我的车位",
+                    "pathName": "pages/releases/myParks/myParks",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "预留",
+                    "pathName": "pages/homes/reserve/reserve",
+                    "query": "lockId=8096002",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

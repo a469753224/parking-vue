@@ -1,0 +1,31 @@
+<view class="step-item">
+    <image class="step-image" src="/assets/images/release/park/step_01@2x.png"/>
+    <view class="step-tips">
+        <text class="no">1.申请发布</text>
+        <text class="desc">填写联系人、联系电话及车位信息，申请发布车位</text>
+    </view>
+</view>
+
+<view class="step-item">
+    <image class="step-image" src="/assets/images/release/park/step_01@2x.png"/>
+    <view class="step-tips">
+        <text class="no">2.沟通和装锁</text>
+        <text class="desc">工作人员将在24小时内致电与您沟通确认</text>
+    </view>
+</view>
+
+<view class="step-item">
+    <image class="step-image" src="/assets/images/release/park/step_01@2x.png"/>
+    <view class="step-tips">
+        <text class="no">3.签约和安装</text>
+        <text class="desc">确认合同并签约后安排安装车位锁</text>
+    </view>
+</view>
+
+<view class="step-item">
+    <image class="step-image" src="/assets/images/release/park/step_01@2x.png"/>
+    <view class="step-tips">
+        <text class="no">4.完成发布</text>
+        <text class="desc">进入我的车位管理设置开放时间段</text>
+    </view>
+</view>

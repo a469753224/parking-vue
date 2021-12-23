@@ -1,0 +1,12 @@
+<view class="title">
+	<text>解开车位锁5分钟后未停车，车位锁将自动上锁</text>
+</view>
+
+<view class="btn-group">
+	<view wx:if="{{isCode}}" class="tips-warrp">
+		<van-count-down use-slot time="{{ time }}" bind:change="onChange" bind:finish="finish">
+			<text class="tips">{{ timeData.seconds }}后重新获取</text>
+		</van-count-down>
+	</view>
+	<text class="btn {{!isCode?'':'disable'}}" bindtap="unlock">解锁</text>
+</view>

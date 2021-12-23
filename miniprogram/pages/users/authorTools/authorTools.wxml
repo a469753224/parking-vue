@@ -1,0 +1,12 @@
+<view class="author-tools">
+    <view class="view">
+        <image class="tools-image" src="../../../assets/images/user/author@2x.png" />
+        <text class="pay-text">微信支付分 | 先停后付</text>
+    </view>
+    <view class="right" bindtap="openAuthor">
+        <text class="{{open?'open':''}}">{{open?'已开启':'去开启'}}</text>
+        <van-icon size="28rpx" name="arrow" />
+    </view>
+</view>
+
+<tips title="提示" content="{{status?'关闭微信支付分服务？':'开启微信支付分服务？'}}" cancelText="取消" bind:confirm="author" show="{{show}}" />

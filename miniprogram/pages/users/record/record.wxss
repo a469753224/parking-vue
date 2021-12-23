@@ -1,0 +1,203 @@
+/* pages/users/record/record.wxss */
+
+page {
+	padding: 24rpx;
+	box-sizing: border-box;
+	background-color: rgba(245, 245, 245, 1);
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	font-size: 40rpx;
+	color: rgba(51, 51, 51, 1);
+	margin: 0 24rpx 24rpx;
+}
+
+.order-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 654rpx;
+	height: 368rpx;
+	border-radius: 20rpx;
+	margin: 16rpx auto 64rpx;
+	padding: 40rpx 24rpx;
+	box-sizing: border-box;
+	font-size: 26rpx;
+	color: rgba(43, 34, 24, 1);
+	background-color: rgba(255, 217, 26, 1);
+}
+
+.order-number {
+	font-size: 80rpx;
+	color: rgba(255, 83, 26, 1);
+	margin: 10rpx 0;
+}
+
+.order-time {
+	font-size: 32rpx;
+	color: rgba(43, 34, 24, 1);
+	margin: 0 0 10rpx;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 702rpx;
+	height: 396rpx;
+	border-radius: 20rpx;
+	margin: 16rpx 0 64rpx;
+	padding: 40rpx 24rpx;
+	box-sizing: border-box;
+	background-color: rgba(255, 217, 26, 1);
+}
+
+.date-time {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.time {
+	font-size: 48rpx;
+	color: rgba(255, 83, 26, 1);
+}
+
+.price {
+	font-size: 32rpx;
+	color: rgba(43, 34, 24, 1);
+}
+
+.card-address {
+	font-size: 26rpx;
+	color: rgba(43, 34, 24, 1);
+}
+
+.map-image {
+	display: flex;
+	justify-content: center;
+	margin: 12rpx auto 0;
+}
+
+.map-image image {
+	width: 508rpx;
+	height: 193rpx;
+	object-fit: cover;
+}
+
+.scroll {
+	height: 50vh;
+}
+
+.cell {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 702rpx;
+	height: 180rpx;
+	border-radius: 20rpx;
+	margin: 0 0 24rpx;
+	padding: 24rpx;
+	box-sizing: border-box;
+	background-color: rgb(255, 255, 255);
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.status {
+	display: flex;
+	align-items: center;
+}
+
+.desc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 32rpx;
+	padding: 0 16rpx;
+	font-size: 22rpx;
+	border-radius: 16rpx;
+	color: rgba(255, 83, 26, 1);
+	margin: 0 0 0 36rpx;
+	border: 2rpx solid rgba(255, 83, 26, 1);
+}
+
+.pay-money {
+	font-size: 32rpx;
+	color: rgba(43, 34, 24, 1);
+}
+
+.pay-date {
+	font-size: 26rpx;
+	color: rgba(153, 153, 153, 1);
+	margin: 8rpx 0;
+}
+
+.pay-address {
+	font-size: 26rpx;
+	color: rgba(153, 153, 153, 1);
+}
+
+.reserve {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 176rpx;
+	height: 56rpx;
+	font-size: 26rpx;
+	border-radius: 28rpx;
+	color: rgba(255, 179, 26, 1);
+	background-color: rgba(255, 217, 26, 0.15);
+}
+
+.grey {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 176rpx;
+	height: 56rpx;
+	border-radius: 28rpx;
+	font-size: 26rpx;
+	color: rgba(51, 51, 51, 1);
+	background-color: rgba(245, 245, 245, 1);
+}
+
+.pay-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 176rpx;
+	height: 56rpx;
+	border-radius: 28rpx;
+	font-size: 26rpx;
+	color: rgba(43, 34, 24, 1);
+	background-color: rgba(255, 202, 26, 1);
+}
+
+.right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 152rpx;
+	height: 180rpx;
+	font-size: 28rpx;
+	margin: 0 0 0 16rpx;
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 83, 26, 1);
+}
+
+.detele-car {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 152rpx;
+	height: 180rpx;
+	font-size: 28rpx;
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 83, 26, 1);
+}

@@ -1,0 +1,30 @@
+<!--pages/homes/success/success.wxml-->
+<view class="header">
+    <image class="right" src="../../../assets/images/home/right@2x.png"/>
+    <text class="pay-desc">支付成功</text>
+</view>
+
+<view class="pay-money"> 
+    <text class="sign">￥</text>
+    <text class="money">{{order.total}}</text>
+</view>
+
+<view class="pay-info">
+    <view class="info-item">
+        <text class="label">使用时长</text>
+        <text class="subtitle">{{order.times}}</text>
+    </view>
+    <view class="info-item">
+        <text class="label">付款方式</text>
+        <text class="subtitle">{{order.payChannel}}</text>
+    </view>
+</view>
+
+<view class="btn-group">
+    <text class="btn default" bindtap="readOrder">查看订单</text>
+    <text class="btn active" bindtap="backHome">返回首页</text>
+</view>
+
+<view class="banner">
+    <image class="banner-image" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1724590483,4069691618&fm=26&gp=0.jpg" />
+</view>

@@ -1,0 +1,145 @@
+<!--pages/homes/pay/pay.wxml-->
+
+<view class="header" />
+
+<view class="title">
+    <text>以下是您此次使用的费用</text>
+</view>
+
+<view class="atcr" />
+
+<view class="pay-content">
+
+    <text class="total-time-title">总使用时长</text>
+
+    <text class="total-time">{{bill.times}}</text>
+
+    <view class="time">
+        <view class="time-item">
+            <text>{{bill.benginResver}}</text>
+            <text>开始预留</text>
+        </view>
+        <view class="time-item active">
+            <text>{{bill.timeouts}}</text>
+            <text>超时</text>
+        </view>
+        <view class="time-item">
+            <text>{{bill.payTime}}</text>
+            <text>取车</text>
+        </view>
+    </view>
+
+    <view class="park-info">
+        <view class="park-item">
+            <text>车位编号</text>
+            <text>{{bill.placeNumbering}}</text>
+        </view>
+        <view class="park-item">
+            <text>车锁编号</text>
+            <text>{{bill.lockerId}}</text>
+        </view>
+        <view class="park-item">
+            <text>车牌号码</text>
+            <text>{{bill.plate}}</text>
+        </view>
+        <view class="park-item">
+            <text>具体地址</text>
+            <text>{{bill.placeAddress}}</text>
+        </view>
+    </view>
+
+    <view class="line">
+        <text />
+    </view>
+
+    <view class="price">
+        <view class="price-item">
+            <view>
+                <text>计费规则</text>
+                <text wx:if="{{bill.expenseType == 2}}">20元/次</text>
+                <text wx:else>￥1.0/15分钟，15分钟内免费</text>
+            </view>
+        </view>
+        <view class="price-item">
+            <view>
+                <text>原定费用</text>
+                <text wx:if="{{bill.expenseType == 2}}">20元/次</text>
+                <text wx:else>￥1.0/15分钟</text>
+            </view>
+            <text class="number">￥{{bill.cost}}</text>
+        </view>
+        <view class="price-item">
+            <view>
+                <text>超时费用</text>
+                <text wx:if="{{bill.expenseType == 2}}">20元/次</text>
+                <text wx:else>￥1.0/15分钟</text>
+            </view>
+            <text class="number">￥{{bill.timeoutCost}}</text>
+        </view>
+    </view>
+
+    <view class="pay-total">
+        <text>合计</text>
+        <view class="total-price">
+            <text class="total-price-sign">￥</text>
+            <text class="total-number">{{bill.cost}}</text>
+        </view>
+    </view>
+
+    <view class="service">
+        <text>对此订单有疑问？</text>
+        <view class="customer-service" bindtap="call">
+            <image class="service-image" src="/assets/images/home/service@2x.png" />
+            <text>联系客服</text>
+        </view>
+    </view>
+
+</view>
+
+<view class="pay-info">
+    <text class="pay-info-title">订单信息</text>
+    <view class="pay-info-item">
+        <text>订单编号</text>
+        <text class="mar-l">{{bill.orderNumbering}}</text>
+    </view>
+    <view class="pay-info-item">
+        <text>创建时间</text>
+        <text class="mar-l">{{bill.creatTime}}</text>
+    </view>
+</view>
+
+<view class="btn-group">
+    <view>
+        <text class="bold">￥</text>
+        <text class="pay-number">{{bill.cost}}</text>
+    </view>
+    <text class="btn" bindtap="payOrder">去支付</text>
+</view>
+
+<!-- 支付方式 -->
+<view class="overlay" wx:if="{{showOverlay}}" catchtap="overlay">
+    <view class="pay-way">
+        <van-radio-group value="{{payWay}}">
+            <view class="cell" data-name="1" catchtap="onChangeRadio">
+                <view class="cell-title">
+                    <image class="pay-icon" src="/assets/images/home/balance@2x.png" />
+                    <text>余额支付(可用余额￥0.00）</text>
+                </view>
+                <van-radio name="1" checked-color="rgba(255, 201, 26, 1)" />
+            </view>
+            <view class="cell" data-name="2" catchtap="onChangeRadio">
+                <view class="cell-title">
+                    <image class="pay-icon" src="/assets/images/home/wx_pay@2x.png" />
+                    <text>微信支付</text>
+                </view>
+                <van-radio name="2" checked-color="rgba(255, 201, 26, 1)" />
+            </view>
+        </van-radio-group>
+        <view class="pay-way-btn" catchtap="payOrder">
+            <text>立即支付</text>
+        </view>
+    </view>
+</view>
+
+<!-- 联系客服 -->
+<contact show="{{show}}" />

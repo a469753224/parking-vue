@@ -1,0 +1,99 @@
+<!--pages/user/user.wxml-->
+
+<view class="header">
+
+    <view class="user-card">
+        <image wx:if="{{token}}" class="avatar" src="/assets/images/user/avatar_default@2x.png" />
+        <image wx:else class="avatar" src="/assets/images/user/avatar_default@2x.png" bindtap="login" />
+        <text wx:if="{{token}}" class="user-name">{{user.phone?user.phone:'佚名用户'}}</text>
+        <text wx:else class="user-name" bindtap="login">请点击登录</text>
+    </view>
+
+    <view class="grid">
+        <view class="arc" />
+        <view class="grid-item" bindtap="wallet">
+            <text class="number">{{user.totalBalance === undefind ? '--' : user.totalBalance}}</text>
+            <text class="desc">我的钱包</text>
+        </view>
+        <view class="grid-item" bindtap="points">
+            <text class="number">{{user.integral === undefind ? '--' : user.integral}}</text>
+            <text class="desc">我的积分</text>
+        </view>
+        <view class="grid-item" bindtap="myPlate">
+            <text class="number">{{user.plate === undefind ? '--' : user.plate}}</text>
+            <text class="desc">我的车辆</text>
+        </view>
+    </view>
+
+</view>
+
+<view class="toolbars">
+
+    <view class="cell" bindtap="historyOrder">
+        <view class="cell-left">
+            <image class="title-icon" src="/assets/images/user/toolbars_01@2x.png" />
+            <text>停车记录</text>
+        </view>
+        <van-icon name="arrow" size="32rpx" color="rgba(153, 153, 153, 1)" />
+    </view>
+
+    <view class="cell" bindtap="cancellation">
+        <view class="cell-left">
+            <image class="title-icon" src="/assets/images/user/toolbars_02@2x.png" />
+            <text>车位管理</text>
+        </view>
+        <van-icon name="arrow" size="32rpx" color="rgba(153, 153, 153, 1)" />
+    </view>
+
+    <view class="cell" wx:if="{{false}}">
+        <view class="cell-left">
+            <image class="title-icon" src="/assets/images/user/toolbars_03@2x.png" />
+            <text>核销记录</text>
+        </view>
+        <van-icon name="arrow" size="32rpx" color="rgba(153, 153, 153, 1)" />
+    </view>
+
+    <view class="cell" bindtap="callUs">
+        <view class="cell-left">
+            <image class="title-icon" src="/assets/images/user/toolbars_04@2x.png" />
+            <text>联系我们</text>
+        </view>
+        <van-icon name="arrow" size="32rpx" color="rgba(153, 153, 153, 1)" />
+    </view>
+
+    <view class="cell" bindtap="setup">
+        <view class="cell-left">
+            <image class="title-icon" src="/assets/images/user/toolbars_05@2x.png" />
+            <text>设置</text>
+        </view>
+        <van-icon name="arrow" size="32rpx" color="rgba(153, 153, 153, 1)" />
+    </view>
+
+    <view class="cell" bindtap="tests" wx:if="{{false}}">
+        <view class="cell-left">
+            <image class="title-icon" src="/assets/images/user/toolbars_05@2x.png" />
+            <text>支付分订单</text>
+        </view>
+        <van-icon name="arrow" size="32rpx" color="rgba(153, 153, 153, 1)" />
+    </view>
+
+    <view class="cell" bindtap="beforPay" wx:if="{{false}}">
+        <view class="cell-left">
+            <image class="title-icon" src="/assets/images/user/author@2x.png" />
+            <text>免押金停车</text>
+        </view>
+        <van-icon name="arrow" size="32rpx" color="rgba(153, 153, 153, 1)" />
+    </view>
+
+</view>
+
+<view class="banner" wx:if="{{user}}">
+    <image class="banner-swiper" src="{{advert}}" />
+</view>
+
+<!-- 组件 -->
+<contact show="{{show}}" />
+<tips content="{{content}}" showCancel="{{false}}" show="{{shows}}" />
+<tips title="登录成功" content="为方便您以后的操作，建议您前往绑定手机号码！" cancelText="暂不绑定" bind:confirm="bindPhone" slotBtn="{{true}}" show="{{showStatus}}">
+    <button class="band-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" slot="btn">前往绑定</button>
+</tips>

@@ -1,0 +1,42 @@
+<van-tabs color="rgba(255, 202, 26, 1)" sticky="{{true}}" bind:change="onChange">
+	<van-tab title="未使用">
+		<view class="coupon-container">
+			<block wx:if="{{coupons.length > 0}}">
+				<block wx:for="{{coupons}}" wx:key="index" wx:for-item="item">
+					<coupon-card row="{{item}}">
+						<block wx:if="{{item.state == 1 }}">
+							<text class="{{item.couponType == 1 ? 'yellow' : 'green'}} btn" data-id="{{item.couponId}}"  bindtap="useCouppon">立即使用</text>
+						</block>
+					</coupon-card>
+				</block>
+			</block>
+			<block wx:else>
+				<van-empty description="暂无优惠券" />
+			</block>
+		</view>
+	</van-tab>
+	<van-tab title="已使用">
+		<view class="coupon-container">
+			<block wx:if="{{coupons.length > 0}}">
+				<block wx:for="{{coupons}}" wx:key="index" wx:for-item="item">
+					<coupon-card row="{{item}}" />
+				</block>
+			</block>
+			<block wx:else>
+				<van-empty description="暂无优惠券" />
+			</block>
+		</view>
+	</van-tab>
+	<van-tab title="已过期">
+		<view class="coupon-container">
+			<block wx:if="{{coupons.length > 0}}">
+				<block wx:for="{{coupons}}" wx:key="index" wx:for-item="item">
+					<coupon-card row="{{item}}"/>
+				</block>
+			</block>
+			<block wx:else>
+				<van-empty description="暂无优惠券" />
+			</block>
+		</view>
+	</van-tab>
+</van-tabs>

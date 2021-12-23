@@ -1,0 +1,53 @@
+<!--pages/homes/refundApply/refundApply.wxml-->
+<view class="write-describe">
+    <text class="title">退款原因</text>
+    <view class="cell">
+        <text>计费有误</text>
+        <van-checkbox value="{{reason}}" bindchange="onCharging" checked-color="RGBA(255, 201, 26, 1)" />
+    </view>
+    <view class="explain-upload">
+        <view class="label">
+            <text class="sign">*</text>
+            <text>情况说明和凭证</text>
+        </view>
+        <view class="input">
+            <view class="texterea">
+                <textarea class="texterea-content" bindinput="conputed" maxlength="200" placeholder="请您说明情况并上传凭证" />
+                <text>{{surplus}}/{{max}}</text>
+            </view>
+            <view class="voucher">
+                <block wx:if="{{image.length > 0}}">
+                    <view class="voucher-warrp" wx:for="{{image}}" wx:key="index" wx:for-item="item">
+                        <van-icon name="clear" size="30rpx" class="close" color="RGBA(217, 217, 217, 1)" data-index="{{index}}" bindtap="deleteVoucher"/>
+                        <image class="voucher-image" mode="aspectFit" src="{{item}}"/>
+                    </view>
+                </block>
+                <view class="upload-btn" bindtap="chooseUpload" wx:if="{{image.length != 3}}">
+                    <image class="camera" src="/assets/images/home/camera@2x.png"/>
+                    <text>最多{{3-image.length}}张</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="btm-group">
+    <view class="money">
+        <text class="rmb">￥</text>
+        <text class="number">6.00</text>
+    </view>
+    <text class="btn" bindtap="applyRefund">申请</text>
+</view>
+
+<view class="overlay" wx:if="{{show}}">
+    <view class="upload-type">
+        <view class="upload-cell" data-type="camera" bindtap="chooseImage">
+            <image src="../../../assets/images/home/upload_camera@2x.png"/>
+            <text>拍照</text>
+        </view>
+        <view class="upload-cell" data-type="album" bindtap="chooseImage">
+            <image src="../../../assets/images/home/upload_image@2x.png"/>
+            <text>从相册中选择</text>
+        </view>
+    </view>
+</view>

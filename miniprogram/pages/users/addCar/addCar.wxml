@@ -1,0 +1,53 @@
+<!--pages/addCar/addCar.wxml-->
+<view class="header">
+    <text>请输入车牌</text>
+    <view class="checkbox">
+        <text>新能源</text>
+        <van-checkbox value="{{value}}" bind:change="newEnergy" checked-color="rgba(255, 201, 26, 1)" size="28rpx" />
+    </view>
+</view>
+
+<view class="car-no">
+    <text wx:for="{{carNo}}" wx:key="index" wx:for-item="item" data-index="{{index}}" bindtap="checkItem"
+        class="{{currentIndex === index ? 'active' : ''}}">{{item}}</text>
+</view>
+
+<view class="set-default">
+    <text>设为默认车牌</text>
+    <van-switch checked="{{checked}}" inactive-color="RGBA(217, 217, 217, 1)" active-color="rgba(255, 201, 26, 1)" bind:change="onChange" size="32rpx" />
+</view>
+
+<!-- <van-popup show="{{show}}" position="bottom" custom-style="height: 360rpx" overlay="{{false}}"> -->
+<view class="car-keyboard {{show?'':'hides'}}">
+    <view class="col">
+        <text wx:for="{{keys_keyword[0]}}" wx:for-item="item" wx:key="index" bindtap="checkcedItem"
+            data-item="{{item}}">{{item}}</text>
+    </view>
+    <view class="col">
+        <text wx:for="{{keys_keyword[1]}}" wx:for-item="item" wx:key="index" bindtap="checkcedItem"
+            data-item="{{item}}">{{item}}</text>
+    </view>
+    <view class="col">
+        <text wx:for="{{keys_keyword[2]}}" wx:for-item="item" wx:key="index" bindtap="checkcedItem"
+            data-item="{{item}}">{{item}}</text>
+    </view>
+    <view class="col-btm">
+        <view class="col-lum">
+            <text wx:for="{{keys_keyword[3]}}" wx:for-item="item" wx:key="index" bindtap="checkcedItem"
+                data-item="{{item}}">{{item}}</text>
+        </view>
+        <view class="col-lum">
+            <text class="more {{carNo[0] === '' && currentIndex === 0 ? 'show' : 'hide'}}"
+                bindtap="moreKey">{{more?'更多':'返回'}}</text>
+            <view class="delete" bindtap="deleteByIndex">
+                <image class="backspace" src="/assets/images/icon/backspace.png" />
+            </view>
+            <text class="confirm" bindtap="confirmPlat">确定</text>
+        </view>
+    </view>
+</view>
+<!-- </van-popup> -->
+
+<view class="btn-group">
+    <text bindtap="savePlat" class="active">保存</text>
+</view>

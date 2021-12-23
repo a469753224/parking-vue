@@ -1,0 +1,69 @@
+<swiper class="swiper">
+    <swiper-item wx:for="{{[1,2,3]}}" wx:key="index" wx:for-item="item">
+        <image wx:if="{{parkInfo.estateUrl}}" src="{{parkInfo.estateUrl}}" class="swiper-image" />
+        <image wx:else src="/assets/images/home/home_emprty_icon.png" class="swiper-image" />
+    </swiper-item>
+</swiper>
+
+<view class="info-card">
+    <view class="title-warp">
+        <text class="title">{{parkInfo.name}}</text>
+        <text class="sub-title">{{parkInfo.streetAddress}}</text>
+    </view>
+    <view class="pay">
+        <view class="pay-item">
+            <text>可用车位: </text>
+            <text class="orage">{{parkInfo.parkingConunt}}</text>
+            <text>个</text>
+        </view>
+    </view>
+</view>
+
+<view class="ruls" wx:if="{{parkInfo.tipInfo}}">
+    <view class="rul-item">
+        <image class="rul-image" src="/assets/images/home/home_rmb_sign.png" />
+        <view class="ruls-detail">
+            <rich-text nodes="{{parkInfo.tipInfo}}"/>
+        </view>
+    </view>
+    <view class="rul-item">
+        <image class="rul-image" src="/assets//images/home/home_car_icon.png" />
+        <view class="ruls-detail">
+            <text class="rul-title">开放时间</text>
+            <text class="rul-desc">{{parkInfo.beginDate}}~{{parkInfo.endDate}}，仅支持提前15分钟预留车位</text>
+        </view>
+    </view>
+</view>
+
+<view class="overlay" wx:if="{{!isPark}}">
+    <view class="popup" wx:if="{{false}}">
+        <view class="popup-title">
+            <text>附近小区/商圈</text>
+        </view>
+        <scroll-view scroll-y="{{true}}" class="scroll">
+            <view class="popup-cell" wx:for="{{[1,2,3,5,6,9,8]}}" wx:for-item="item" wx:key="index">
+                <view class="cell-item">
+                    <view class="cell-left">
+                        <view class="baseline">
+                            <text class="popup-pay">￥1.0</text>
+                            <text class="popup-desc">/15分钟</text>
+                        </view>
+                        <text class="popup-desc">396m</text>
+                    </view>
+                    <view class="popup-address">
+                        <text class="popup-subtitle">中天世纪花园</text>
+                        <text class="popup-desc space">南宁市青秀区长湖路18号南宁市青秀区长湖路18号南宁市青秀区长湖路18号</text>
+                    </view>
+                </view>
+                <text class="popup-get">查看</text>
+            </view>
+        </scroll-view>
+    </view>
+    <image class="empty-image" src="../../../assets/images/home/park_empty@2x.png" />
+</view>
+
+<view class="btn-group" wx:if="{{isPark}}">
+    <text bindtap="resever">预留车位</text>
+</view>
+
+<tips content="预留车位请移步“榴车位APP”内操作，目前小程序只提供扫码解锁服务，感谢您的理解！" showCancel="{{false}}" show="{{show}}" />

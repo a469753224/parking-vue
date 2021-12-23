@@ -1,0 +1,4 @@
+<textarea class="textarea" model:value="{{content}}" placeholder="请详细描述您的意见或建议，我们将及时跟进和解决"/>
+<view class="btn-group">
+	<text class="btn" bindtap="subComments">提交</text>
+</view>

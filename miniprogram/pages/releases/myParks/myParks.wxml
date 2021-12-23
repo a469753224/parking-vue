@@ -1,0 +1,62 @@
+<view class="header">
+    <view class="title-group">
+        <text class="title">我的车位</text>
+        <text class="subtitle" bindtap="myApply">我的申请</text>
+    </view>
+    <view class="break">
+        <text class="step" bindtap="toStep">目前您共发布了{{parks.length}}个车位</text>
+        <text class="my-park" bindtap="addApply">+申请发布</text>
+    </view>
+</view>
+
+<block wx:if="{{parks.length > 0}}">
+    <view class="card" wx:for="{{parks}}" wx:key="index" wx:for-item="item">
+
+        <view class="status-bar {{item.state == 2 ? 'used' : ''}}">
+            <text class="park-name">{{item.name}}车位</text>
+            <view class="status-group">
+                <text class="title-status">{{item.status}}</text>
+                <text class="profit" bindtap="placeRent"> 累计收益:￥{{item.placeRent}}</text>
+            </view>
+        </view>
+
+        <view class="card-info">
+            <view class="item-row">
+                <view class="row">
+                    <text class="label">车锁编号</text>
+                    <text class="flie">{{item.lockerId}}</text>
+                </view>
+                <view class="row">
+                    <text class="label">车位编号</text>
+                    <text class="flie">{{item.placeNumbering}}</text>
+                </view>
+            </view>
+            <view class="item-row">
+                <view class="row">
+                    <text class="label">区域街道</text>
+                    <text class="flie">{{item.street}}</text>
+                </view>
+            </view>
+            <view class="set-time" data-row="{{item}}" bindtap="setOpenTime">
+                <text class="open-time">开放时间设定</text>
+                <text class="set-btn">设置</text>
+            </view>
+            <view class="toolbar">
+                <view class="work-time">
+                    <text class="desc">{{item.rental}}</text>
+                    <text class="time-slot">{{item.beginDate}}~{{item.endDate}}</text>
+                </view>
+                <van-switch checked="{{item.openState == 0 ? true : false}}" data-placeid="{{item.placeId}}"
+                    bind:change="isOpen" size="28rpx" inactive-color="RGBA(217, 217, 217, 1)"
+                    active-color="RGBA(255, 201, 26, 1)" />
+            </view>
+            <view class="unlock" data-id="{{item.lockerIds}}" bindtap="unlock" wx:if="{{item.state != 2}}">
+                <text class="unlock-park">解锁停车</text>
+                <image src="/assets/images/icon/crow_left@2x.png" class="crow-left" />
+            </view>
+        </view>
+    </view>
+</block>
+<block wx:else>
+    <van-empty description="暂无车位" />
+</block>

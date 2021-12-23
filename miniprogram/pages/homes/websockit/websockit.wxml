@@ -1,0 +1,4 @@
+<text class="btn" bindtap="send" data-token="">用户1发送信息</text>
+<text class="btn" bindtap="send">用户2发送信息</text>
+<text class="btn" bindtap="closeSocket">关闭通讯</text>
+<text class="btn" bindtap="reconnect">重新连接</text>

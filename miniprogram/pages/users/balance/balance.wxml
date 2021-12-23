@@ -1,0 +1,42 @@
+<!--pages/users/balance/balance.wxml-->
+
+<view class="nav-tab">
+	<block wx:for="{{nav}}" wx:key="index" wx:for-item="item">
+		<text data-index="{{index}}" bindtap="onNavto" class="{{index == indexs ? 'active' : ''}}">{{item.name}}</text>
+	</block>
+</view>
+
+<view class="card">
+	<text class="rmb">余额（元）</text>
+	<text class="card-money">{{wallet.balance}}</text>
+	<view class="btn-group">
+		<text class="btn cash" wx:if="{{indexs == 0}}">提现</text>
+		<text class="btn recharge">充值</text>
+	</view>
+</view>
+
+<view class="nav-tabs">
+	<block wx:for="{{menu}}" wx:key="index" wx:for-item="item">
+		<text data-index="{{index}}" bindtap="onMenu" class="{{index == active ? 'active' : ''}}">{{item.name}}</text>
+	</block>
+</view>
+
+<block wx:if="{{recharge.length > 0}}">
+	<block wx:for="{{recharge}}" wx:key="index" wx:for-item="item">
+		<view class="cell {{index == 0 ? 'tab-top' : ''}}">
+			<view class="left">
+				<text class="title">{{item.remarks}}</text>
+				<view class="date">{{item.createDate}}</view>
+			</view>
+			<view class="right">
+				<text
+					class="sign {{item.accountingAmount == 2 ? 'income' : ''}}">{{item.accountingAmount ==  1 ? '+' : '-'}}</text>
+				<text class="money">{{item.accountingAmount}}</text>
+				<van-icon name="arrow" size="28rpx" color="rgba(153, 153, 153, 1)" />
+			</view>
+		</view>
+	</block>
+</block>
+<block wx:else>
+	<van-empty description="您还没有充值记录" />
+</block>

@@ -1,0 +1,32 @@
+<view class="card {{row.state == 1 ? row.couponType == 1 ? 'yellow' : 'green' : 'grey'}}">
+	<view class="title">
+		<text>{{row.stoName}}</text>
+	</view>
+	<image wx:if="{{row.state == 1 && row.receive == 1}}" src="/assets/images/user/received@2x.png" class="received" />
+	<view class="card-info">
+		<text class="pay-type">{{row.type == 1 ? '商家立减' : '商家优惠券'}}</text>
+		<image wx:if="{{row.state == 1 && row.couponType == 1}}" class="coin-back"
+			src="/assets/images/user/yellow_back@2x.png" />
+		<image wx:if="{{row.state == 1 && row.couponType == 2}}" class="coin-back"
+			src="/assets/images/user/green_back@2x.png" />
+		<image wx:if="{{row.state == 2}}" class="icon-used" src="/assets/images/user/used@2x.png" />
+		<image wx:if="{{row.state == 3}}" class="icon-used" src="/assets/images/user/beoverdue@2x.png" />
+		<view class="tools">
+			<view class="price">
+				<text class="sign" wx:if="{{row.type == 1}}">￥</text>
+				<text class="number">{{row.usedAmount}}</text>
+				<text class="sign" wx:if="{{row.type == 2}}">折</text>
+			</view>
+			<view class="date-info">
+				<text class="desc">{{row.used}}</text>
+				<text class="date">{{row.beginTime}}-{{row.endTime}}</text>
+			</view>
+			<view class="btn-group">
+				<slot />
+			</view>
+		</view>
+		<view class="address">
+			<text>·商家地址：{{row.stoAddr}}</text>
+		</view>
+	</view>
+</view>

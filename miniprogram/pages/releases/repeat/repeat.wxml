@@ -1,0 +1,11 @@
+<view>
+  <van-checkbox-group value="{{ result }}" bind:change="onChange">
+    <block wx:for="{{list}}" wx:key="index" wx:for-item="item">
+      <van-checkbox name="{{index + 1}}" label-position="left" class="check" checked-color="rgba(255, 201, 26, 1)">{{item}}</van-checkbox>
+    </block>
+  </van-checkbox-group>
+</view>
+
+<view class="btn-group">
+	<text class="btn" bindtap="submit">确定</text>
+</view>

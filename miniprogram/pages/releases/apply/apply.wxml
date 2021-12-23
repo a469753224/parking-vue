@@ -1,0 +1,30 @@
+<view class="fild">
+    <text class="label">联系人</text>
+    <input type="text" value="{{contactsName}}" bind:change="changeName" placeholder-class="placeholder" placeholder="请输入联系人"/>
+</view>
+
+<view class="fild">
+    <text class="label">联系电话</text>
+    <input type="number" value="{{phone}}" maxlength="11" bind:change="changePhone" maxlength="11" placeholder-class="placeholder" placeholder="请输入联系电话"/>
+</view>
+
+<view class="fild">
+    <text class="label">区域街道</text>
+    <view class="right">
+        <input type="text" value="{{district}}" bind:change="changeStreet" placeholder-class="placeholder" placeholder="选择地址/小区"/>
+        <view class="position" bindtap="position">
+            <image class="position-icon" src="/assets/images/release/park/position@2x.png"/>
+            <text>定位</text>
+        </view>
+    </view>
+</view>
+
+<view class="fild">
+    <text class="label">详细地址</text>
+    <input type="text" value="{{address}}" bind:change="changeAddress" placeholder-class="placeholder" placeholder="请输入小区"/>
+</view>
+
+<view class="btn-group">
+    <text bindtap="submitApply" class="active" wx:if="{{contactsName&&phone&&district&&address}}">提交申请</text>
+    <text wx:else>提交申请</text>
+</view>

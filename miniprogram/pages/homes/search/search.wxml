@@ -1,0 +1,43 @@
+<view class="search-warp">
+    <van-search model:value="{{ value }}" placeholder="输入小区/商圈" show-action bind:change="onInput" bind:search="onSearch"
+        bind:cancel="onCancel" />
+</view>
+
+<view class="map">
+    <map name="maps" scale="{{17}}" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" />
+</view>
+
+<view class="search-list" wx:if="{{tips.length > 0}}">
+
+    <view class="cell" wx:for="{{tips}}" wx:key="index" wx:for-item="item" data-row="{{item}}" bindtap="selectPark">
+        <view class="icon-warp">
+            <image class="position-icon" src="../../../assets/images/home/position_icon_search@2x.png" />
+        </view>
+        <view class="address">
+            <text class="address-title">{{item.name}}</text>
+            <view class="address-detail">
+                <text class="address-desc">{{item.address}}</text>
+                <text class="address-distance">{{item.distance}}</text>
+                <!-- <block wx:if="{{active == index}}">
+                    <van-icon name="success" size="48rpx" color="rgb(0,255,127)" />
+                </block> -->
+            </view>
+        </view>
+    </view>
+
+</view>
+
+<view class="search-list" wx:if="{{tips.length == 0}}">
+    <view class="cell" wx:for="{{historys}}" wx:key="index" wx:for-item="item" data-row="{{item}}" bindtap="selectPark">
+        <view class="icon-warp">
+            <image class="history-icon" src="../../../assets/images/home/history@2x.png" />
+        </view>
+        <view class="address">
+            <text class="address-title">{{item.name}}</text>
+            <view class="address-detail">
+                <text class="address-desc">{{item.address}}</text>
+                <text class="address-distance">{{item.distance}}</text>
+            </view>
+        </view>
+    </view>
+</view> 

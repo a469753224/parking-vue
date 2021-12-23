@@ -1,0 +1,18 @@
+<!--pages/sigup/accunt/accunt.wxml-->
+<view class="login-type">
+    <text>账号登录</text>
+</view>
+
+<view class="login">
+    <input type="text" model:value="{{username}}" placeholder="请输入手机号"/>
+    <input type="text" model:value="{{password}}" placeholder="请输入密码"/>
+    <text class="forget">忘记密码？</text>
+</view>
+
+<view class="btn-grou">
+    <text bindtap="login" class="{{username&&password&&checked?'active':''}}">登录</text>
+</view>
+
+<view class="aggrent">
+    <van-checkbox icon-size="32rpx" checked-color="rgba(255, 201, 26, 1)" value="{{ checked }}" bind:change="onChange">阅读并同意《服务协议》和《隐私政策》</van-checkbox>
+</view>

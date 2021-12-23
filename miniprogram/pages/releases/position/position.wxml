@@ -1,0 +1,32 @@
+<!--pages/releases/position/position.wxml-->
+<view class="search-warp">
+    <view class="select-city" bindtap="selectCity">
+        <text classs="city">南宁</text>
+        <image class="arrow-down {{crowFlag?'active':''}}" src="/assets/images/release/park/crow@2x.png"/>
+    </view>
+    <view class="search">
+        <image class="search-icon" src="/assets/images/release/demand/search@2x.png" />
+        <input class="search-input" type="text" placeholder="输入小区" placeholder-class="placeholder" bindfocus="focus" bindblur="blur"/>
+    </view>
+    <text class="cancel" wx:if="{{flag}}" bindtap="cancel">取消</text>
+</view>
+
+<view class="map">
+    <map name="maps" class="map-view" longitude="{{lgt}}" latitude="{{lat}}"/>
+    <image class="my-position" src="/assets/images/release/park/my_position@2x.png"/>
+</view>
+
+<view class="street-list">
+
+    <view class="cell" wx:for="{{20}}" wx:key="index" wx:for-item="item">
+        <image class="position-icon" src="/assets/images/release/park/position_default@2x.png" />
+        <view class="address">
+            <text class="address-street">中天·世纪花园</text>
+            <view class="desc">
+                <text>南宁市青秀区长湖路18号</text>
+                <text>269m</text>
+            </view>
+        </view>
+    </view>
+
+</view>
