@@ -1,0 +1,40 @@
+{
+    "setting": {},
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "收支详情",
+                    "pathName": "pages/users/reveExpen/reveExpen",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "收益统计",
+                    "pathName": "pages/releases/placeRent/placeRent",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "余额提现",
+                    "pathName": "pages/users/withdrawal/withdrawal",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "我的车位",
+                    "pathName": "pages/releases/myParks/myParks",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "预留",
+                    "pathName": "pages/homes/reserve/reserve",
+                    "query": "lockId=8096002",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

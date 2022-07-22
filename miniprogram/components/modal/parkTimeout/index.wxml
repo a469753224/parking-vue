@@ -1,0 +1,12 @@
+<!--components/modal/parkTimeout/index.wxml-->
+<view class="timeout" wx:if="{{show}}">
+    <view class="timeout-container">
+        <image class="clock" src="{{clock}}" />
+        <text class="title">用户超时停车，您的车位正在被占用</text>
+        <text class="tips">抱歉，您的车位正在被占用，超出车位开放时间的部分续时用户将向您支付2倍停车费，感谢您的谅解</text>
+        <view class="btn-group">
+            <text class="grey" bindtap="contact">联系管理员</text>
+            <text class="orange" bindtap="cancel">我知道了</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,38 @@
+<block wx:if="{{repeat.length > 0}}">
+<view class="card" wx:for="{{repeat}}" wx:key="index">
+    <view class="status-bar">
+        <text>{{item.state}}</text>
+    </view>
+    <view class="card-info">
+        <view class="item-row">
+            <view class="row">
+                <text class="label">联系人</text>
+                <text class="flie">{{item.contactsName}}</text>
+            </view>
+            <view class="row">
+                <text class="label">联系电话</text>
+                <text class="flie">{{item.phone}}</text>
+            </view>
+        </view>
+        <view class="address">
+            <text class="label">区域街道</text>
+            <text class="flie">{{item.street}}</text>
+        </view>
+        <view class="tips">
+            <text>{{item.remarks}}</text>
+        </view>
+        <view class="toolbar">
+            <text class="date">{{item.createDate}}</text>
+            <text class="btn" data-id="{{item.id}}" bindtap="cancel" wx:if="{{item.releaseState == 1}}">取消申请</text>
+            <text class="dalate" data-id="{{item.id}}" wx:if="{{item.releaseState == 3 || item.releaseState == 2}}"  bindtap="deleteApply">删除</text>
+        </view>
+    </view>
+</view>
+</block>
+
+<block wx:else>
+    <van-empty description="没有申请记录"/>
+</block>
+
+<w-cancel show="{{show}}" bind:confirm="cancelPlace"/>
+<w-cancel show="{{dete}}" bind:confirm="placeDelete"/>

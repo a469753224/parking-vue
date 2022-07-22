@@ -1,0 +1,23 @@
+<view class="money">
+    <text class="label">出账金额</text>
+    <text class="number">-50.00</text>
+</view>
+
+<view class="content">
+    <view>
+        <text class="subtitle">交易类型</text>
+        <text class="value">支出</text>
+    </view>
+    <view>
+        <text class="subtitle">交易时间</text>
+        <text class="value">2020-11-25 13:28</text>
+    </view>
+    <view>
+        <text class="subtitle">流水单号</text>
+        <text class="value">1239687465879632451</text>
+    </view>
+    <view>
+        <text class="subtitle">备注</text>
+        <text class="value">提现</text>
+    </view>
+</view>

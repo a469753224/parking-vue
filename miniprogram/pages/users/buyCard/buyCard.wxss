@@ -1,0 +1,63 @@
+.container {
+  padding: 24rpx;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 702rpx;
+  height: 178rpx;
+  border-radius: 40rpx;
+  margin: 0 0 24rpx;
+  overflow: hidden;
+  border: 2rpx solid rgb(255, 255, 255);
+}
+
+.item.active {
+  border-color: rgba(255, 179, 26, 1);
+}
+
+.btn-group {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 98rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+}
+
+.pay {
+  display: flex;
+  align-items: baseline;
+}
+
+.pay-sign {
+  font-size: 28rpx;
+  margin: 0 6rpx 0 0;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+}
+
+.pay-number {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: rgba(44, 34, 24, 1);
+  border-radius: 40rpx;
+  background-color: rgba(255, 201, 26, 1);
+}

@@ -1,0 +1,40 @@
+<view class="status">
+	<block wx:if="{{status == 1}}">
+		<text class="status-desc">您已发起退款申请</text>
+		<text class="status-tips">请耐心等待平台处理</text>
+	</block>
+	<block wx:if="{{status == 0}}">
+		<text class="status-desc">退款关闭</text>
+		<text class="status-tips">您已撤销本次退款申请，撤销后不能再次发起</text>
+	</block>
+</view>
+
+<view class="order-info">
+	<view class="title">
+		<text>退款信息</text>
+	</view>
+	<view class="cell">
+		<text class="label">订单金额</text>
+		<text class="value">￥6.00</text>
+	</view>
+	<view class="cell">
+		<text class="label">已退金额</text>
+		<text class="value">￥0.00</text>
+	</view>
+	<view class="cell">
+		<text class="label">申请时间</text>
+		<text class="value">2020-12-19 15:03</text>
+	</view>
+	<view class="cell">
+		<text class="label">退款原因</text>
+		<text class="value">计费有误</text>
+	</view>
+</view>
+
+<view class="btn-group">
+	<text class="btn" wx:if="{{status == 1}}" bindtap="revoke">撤销申请</text>
+	<text class="btn" wx:if="{{status == 0}}" bindtap="contact">联系客服</text>
+</view>
+
+<contact show="{{showContact}}" />
+<tips show="{{show}}" title="确定要撤销申请?" content="撤销后无法再次发起" bind:confirm="confirm"/>

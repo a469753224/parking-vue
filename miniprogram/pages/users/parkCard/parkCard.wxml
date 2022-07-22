@@ -1,0 +1,9 @@
+<view class="empty" wx:if="{{actingUPC.length == 0}}">
+  <image src="../../../assets/images/user/empty.png"/>
+  <text>暂无停车卡</text>
+</view>
+
+<view class="item" wx:for="{{actingUPC}}" wx:key="index">
+  <wallet-card car="{{item}}" />
+  <text class="tips">限榴车位平台合作停车位使用，限用{{item.timesRemain}}次，每次最多抵扣{{item.allowance}}元，限南宁市使用。</text>
+</view>

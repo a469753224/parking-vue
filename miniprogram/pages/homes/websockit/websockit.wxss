@@ -1,0 +1,12 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 96rpx;
+  margin: 50rpx auto;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  color: rgb(255,255,255);
+  background-color: rgba(255, 201, 26, 1);
+}

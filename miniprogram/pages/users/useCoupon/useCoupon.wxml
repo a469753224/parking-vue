@@ -1,0 +1,10 @@
+<use-coupon row="{{coupon}}"/>
+<tips show="{{show}}" content="确定使用优惠券？" bind:confirm="confirm"/>
+<view class="btn-group">
+<block wx:if="{{coupon.state == 1}}">
+	<text bindtap="useCoupon">确认使用</text>
+</block>
+<block wx:else>
+	<text class="disable">确认使用</text>
+</block>
+</view>

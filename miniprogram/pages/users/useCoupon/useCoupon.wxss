@@ -1,0 +1,27 @@
+.btn-group {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 96rpx;
+}
+
+.btn-group text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 606rpx;
+	height: 96rpx;
+	font-size: 32rpx;
+	margin: 0 0 48rpx;
+	border-radius: 96rpx;
+	color: rgba(43, 34, 24, 1);
+	background-color: rgba(255, 201, 26, 1);
+}
+
+.btn-group text.disable {
+	background-color: rgb(220,220,220);
+}

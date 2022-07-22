@@ -1,0 +1,50 @@
+<!--pages/home/home.wxml-->
+<view class="map">
+  <block wx:if="{{longitude}}">
+  <map name="maps" class="map-view" scale="{{17}}" longitude="{{longitude}}" latitude="{{latitude}}"
+    markers="{{markers}}" />
+  </block>
+  <block wx:else>
+    <van-empty image="" description="请检查您的设备定位服务是否已经打开" />
+  </block>
+</view>
+
+<view>
+  <view class="banner">
+    <swiper autoplay="{{true}}" interval="{{5000}}" duration="{{650}}" circular="{{true}}">
+      <swiper-item wx:for="{{banner}}" wx:key="index" wx:for-item="item">
+        <image src="{{item}}" />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="btom-toolbar">
+    <view class="has-order" wx:if="{{orderState}}" bindtap="toOrderDetail">
+      <text>您有一个订单正在进行中</text>
+    </view>
+    <view class="search-warp">
+      <view class="search" bindtap="search">
+        <image src="../../assets/images/home/search@2x.png" />
+        <input model:value="{{address}}" type="text" placeholder="请输入您要查询的地址" disabled="{{true}}" />
+      </view>
+      <view class="btn-group">
+        <text class="reserve" bindtap="reserve">预留车位</text>
+        <view class="scan" bindtap="scan">
+          <image class="scan-image" src="/assets/images/icon/scan@2x.png"/>
+          <text>扫码停车</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<timeout />
+<tips content="预留车位请移步“榴车位APP”内操作，目前小程序只提供扫码解锁服务，感谢您的理解！" showCancel="{{false}}" show="{{show}}" />
+<tips content="您有正在进行中的订单，请先处理！" confirmText="前往处理" cancelText="暂不处理" show="{{orderStatus}}" bind:confirm="confirm" />
+<!--<tips content="你尚未绑定手机，请先绑定手机号码" confirmText="立即绑定" cancelText="暂不绑定" show="{{isLogin}}" bind:confirm="goLogin" />-->
+<coupon show="{{showCoupon}}"/>
+<!-- <tips content="你尚未绑定手机号码，请先绑定手机号码在进行扫码停车" confirmText="前往绑定" cancelText="暂不绑定" show="{{showState}}" bind:confirm="register" /> -->
+<tips title="温馨提示" content="你尚未绑定手机号码，请先绑定手机号码再进行扫码停车！" showCancel="{{false}}" bind:confirm="bindPhone" slotBtn="{{true}}" show="{{showStatus}}">
+    <button class="band-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" slot="btn">前往绑定</button>
+</tips>

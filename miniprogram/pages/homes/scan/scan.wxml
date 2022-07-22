@@ -1,0 +1,12 @@
+<view class="scan">
+    <view class="camera-warp">
+        <camera class="camera" mode="scanCode" flash="{{flash}}" bindscancode="scanSuccess">
+            <cover-view class="scan-animation" />
+        </camera>
+    </view>
+    <text class="scan-tips">将二维码图像置于矩形方框内</text>
+</view>
+
+<image class="torch" bindtap="torchSwitch" src="/assets/images/home/torch@2x.png" />
+
+<tips content="检测到未授权相机使用权，是否去设置打开？" show="{{show}}" bind:confirm="confirm" bind:cancel="cancel"/>

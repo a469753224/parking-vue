@@ -1,0 +1,36 @@
+<view class="wallet-card">
+    <view class="wallet-total">
+        <view>
+            <text class="wallet-total-desc">总余额(元)</text>
+            <text class="money">{{wallet.totalBalance}}</text>
+        </view>
+        <view bindtap="mycoupon">
+            <text class="wallet-total-desc">优惠券(张)</text>
+            <text class="money">{{coupon.length}}</text>
+        </view>
+    </view>
+    <view class="wallet-info">
+        <view class="left" bindtap="balance">
+            <text>钱包余额(元)</text>
+            <text class="info-money">{{wallet.balance}}</text>
+        </view>
+        <view class="right" bindtap="profitBalance">
+            <text>车位收益(元)</text>
+            <text class="info-money">{{wallet.profitBalance}}</text>
+        </view>
+    </view>
+</view>
+
+<view class="recharge-history">
+    <view class="history-title">
+        <text class="title">我的停车卡</text>
+    </view>
+    <view class="flex-left" bindtap="myCard">
+        <text>共{{actingUPC.length}}张</text>
+        <van-icon name="arrow" size="32rpx" />
+    </view>
+</view>
+
+<view class="card-list" wx:for="{{gctingUPC}}" wx:key="index">
+    <wallet-card car="{{item}}" />
+</view>

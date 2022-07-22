@@ -1,0 +1,20 @@
+/* pages/users/integral/integral.wxss */
+
+.itegral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 240rpx 0 0;
+}
+
+.integra-lempty {
+  width: 696rpx;
+  height: 336rpx;
+  margin: 0 0 65rpx;
+}
+
+text {
+  font-size: 26rpx;
+  color: rgba(153, 153, 153, 1);
+}

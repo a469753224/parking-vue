@@ -1,0 +1,17 @@
+<!--pages/homes/cancelOrder/cancelOrder.wxml-->
+
+<view class="order-cancel">
+    <!-- <image class="right" src="/assets/images/home/right@2x.png"/> -->
+    <image class="right" src="/assets/images/home/warning@2x.png"/>
+    <text class="title">订单已取消</text>
+    <!-- <text class="title">超时取消</text> -->
+    <view class="tips">
+        <!-- <text class="warning">您预留的车位已超过15分钟</text> -->
+        <!-- <text class="warning">您预留的车位已超过30分钟，系统已自动取消订单</text>
+        <text>感谢您的使用,您可以重新预留车位</text> -->
+    </view>
+</view>
+
+<view class="btn-group">
+    <text bindtap="backHome">返回首页</text>
+</view>

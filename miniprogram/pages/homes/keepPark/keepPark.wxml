@@ -1,0 +1,82 @@
+<!--pages/homes/reserve/reserve.wxml-->
+
+<view class="cell-warp">
+    <view class="cell"><text>停车时间</text><text class="grey">{{beTime}}</text></view>
+</view>
+
+<view class="cell-warp">
+    <picker mode="time" value="{{enTime}}" bindchange="bindTimeChange" start="{{beTime}}">
+        <view class="cell"><text>取车时间</text>
+            <view class="arrow-bar grey-2"><text>{{enTime}}</text>
+                <van-icon name="arrow" size="28rpx" color="rgba(153, 153, 153, 1)" />
+            </view>
+        </view>
+    </picker>
+</view>
+
+<view class="cell-warp">
+    <!-- <block wx:if="{{carList.length > 0}}">
+        <picker mode="selector" value="{{car}}" range="{{carList}}" bindchange="bindCarChange">
+            <view class="cell nob">
+                <text>车牌</text>
+                <view class="arrow-bar">
+                    <text class="orange">{{plate}}</text>
+                    <van-icon name="arrow" size="28rpx" color="rgba(153, 153, 153, 1)" />
+                </view>
+            </view>
+        </picker>
+    </block> -->
+    <view class="cell nob" bindtap="selectPlate">
+        <text>车牌</text>
+        <view class="arrow-bar">
+            <text class="orange">{{plate?plate:'选择车牌号'}}</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+</view>
+
+<!-- <view class="cell-warp">
+    <view class="cell ruls">
+        <text>计费规则</text>
+        <text wx:if="{{reserve.expenseType == 1}}">￥{{reserve.billingRules}}/15分钟</text>
+        <text wx:else>{{reserve.billingRules}}元/次</text>
+    </view>
+</view> -->
+
+<view class="cell-warp margin">
+    <view class="cell nob">
+        <text>开放时间</text>
+        <text>{{parkInfo.beginDate}}-{{parkInfo.endDate}}</text>
+    </view>
+</view>
+
+<view class="tips">
+    <text class="title">计费规则</text>
+    <view class="content">
+        <rich-text nodes="{{reserve.tipInfo}}" />
+    </view>
+</view>
+
+<view class="tips">
+    <text class="title">温馨提示</text>
+    <view class="content">
+        <text>a.车辆底盘限高>9cm</text>
+        <text>b.提前预留车位：预留成功即开始计费，按照车场计费规则 收取；车位将保留30分钟，超时仍未开锁将自动</text>
+    </view>
+</view>
+
+<view class="deposit">
+    <view class="deposit-left">
+        <image class="deposit-image" mode="aspectFit" src="/assets/images/home/deposit@2x.png" />
+        <view class="deposit-desc">
+            <text class="deposit-title">49押金停车</text>
+            <text class="deposit-text">停车结束后扣除实际费用 剩余金额自动退回</text>
+        </view>
+    </view>
+    <van-checkbox value="{{value}}" icon-size="32rpx" bind:change="onChangeChked"
+        checked-color="rgba(255, 201, 25, 1)" />
+</view>
+
+<view class="btn-group">
+    <button bindtap="createOrder">立即预留</button>
+</view>

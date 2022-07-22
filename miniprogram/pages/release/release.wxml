@@ -1,0 +1,24 @@
+<!--pages/release/release.wxml-->
+<view class="header">
+    <text class="title">发布车位</text>
+    <view class="break">
+        <text class="step" bindtap="toStep">查看发布流程>></text>
+        <text class="my-park" bindtap="myParks">我的车位</text>
+    </view>
+</view>
+
+<swiper class="swiper-warp" autoplay="{{true}}" circular="{{true}}" interval="{{3000}}" indicator-dots="{{true}}" indicator-color="#D9D9D9" indicator-active-color="#FFC91A">
+    <swiper-item class="item" wx:for="{{[1]}}" wx:for-item="item" wx:key="index">
+        <image src="{{banner}}"/>
+    </swiper-item>
+</swiper>
+
+<view class="btn-group">
+    <text class="btn" bindtap="apply">+申请发布</text>
+</view>
+
+<!-- 自定义组件 -->
+<timeout show="{{false}}"/>
+<countdown show="{{false}}"/>
+<park-timeout show="{{false}}"/>
+<tips content="车位发布请移步“榴车位APP”内操作，目前小程序只提供扫码解锁服务，感谢您的理解！" showCancel="{{false}}" show="{{show}}"/>

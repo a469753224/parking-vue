@@ -1,0 +1,32 @@
+.warrp {
+	padding: 24rpx 0;
+}
+
+.list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn {
+	position: relative;
+	z-index: 777;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 144rpx;
+	height: 56rpx;
+	font-size: 26rpx;
+	border-radius: 28rpx;
+	margin: 10rpx 0 0;
+}
+
+.yellow.btn{
+	color: rgba(43, 34, 24, 1);
+	background-color: rgba(255, 202, 26, 1);
+}
+
+.green.btn{
+	color: rgba(255,255,255);
+	background-color: rgba(72, 199, 139, 1);
+}

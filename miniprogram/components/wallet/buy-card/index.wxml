@@ -1,0 +1,13 @@
+<view class="card">
+  <view>
+    <text class="title">{{cardData.name}}</text>
+    <view>
+      <text class="btn-mini">使用规则？</text>
+      <text class="btn-mini">{{cardData.rules}}</text>
+    </view>
+  </view>
+  <view class="right">
+    <text class="number">{{cardData.price}}</text>
+    <text class="sign">元</text>
+  </view>
+</view>

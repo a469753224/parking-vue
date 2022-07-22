@@ -1,0 +1,264 @@
+/* pages/homes/reserve/reserve.wxss */
+
+page {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 0 88rpx;
+  background-color: rgb(240, 240, 240);
+}
+
+.cell-warp {
+  padding: 0 24rpx;
+  background-color: rgb(255, 255, 255);
+}
+
+.margin {
+  margin: 24rpx 0 0;
+}
+
+.nob {
+  border: none !important;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96rpx;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  border-bottom: 1rpx solid rgba(221, 221, 221, 1);
+}
+
+.arrow-bar {
+  display: flex;
+  align-items: center;
+}
+
+.ruls {
+  margin: 24rpx 0 0;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  margin: 24rpx 0 0;
+  padding: 0 24rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin: 24rpx 0 0;
+  color: rgba(153, 153, 153, 1);
+}
+
+.grey {
+  color: rgba(204, 204, 204, 1);
+}
+
+.grey-2 {
+  color: rgba(102, 102, 102, 1);
+}
+
+.orange {
+  color: rgba(255, 83, 25, 1);
+}
+
+.btn-group {
+  position: fixed;
+  bottom: 64rpx;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  /* height: 88rpx; */
+}
+
+.btn-group button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 702rpx;
+  height: 116rpx;
+  font-size: 32rpx;
+  border: none;
+  border-radius: 10rpx;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgba(6, 193, 95, 1);
+}
+
+.deposit {
+  position: fixed;
+  bottom: 184rpx;
+  left: 24rpx;
+  right: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 702rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  padding: 24rpx 24rpx 30rpx;
+  box-sizing: border-box;
+  background-color: rgba(255, 232, 224, 1);
+  border: 2rpx solid rgba(255, 83, 25, 1);
+}
+
+.deposit-left {
+  display: flex;
+}
+
+.deposit-desc {
+  display: flex;
+  flex-direction: column;
+  margin: 0 24rpx;
+}
+
+.deposit-title {
+  font-size: 32rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.deposit-author {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.deposit-author view {
+  display: flex;
+  align-items: center;
+}
+
+.author-bar {
+  display: block;
+  padding: 0 10rpx;
+  color: rgb(153, 153, 153);
+}
+
+.author-image {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 6rpx 0 0;
+}
+
+.deposit-text {
+  font-size: 28rpx;
+  color: rgba(153, 153, 153, 1);
+  margin: 24rpx 0 0 52rpx;
+  line-height: 40rpx;
+}
+
+.orange {
+  color: rgba(255, 83, 25, 1);
+}
+
+.pay-title {
+  display: flex;
+  align-items: center;
+}
+
+.deposit-image {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 24rpx 0 0;
+}
+
+.pay-btn-group {
+  position: fixed;
+  bottom: 103rpx;
+  left: 0;
+  width: 100vw;
+}
+
+.pay-deposit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 702rpx;
+  height: 116rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  background-color: rgba(255, 201, 25, 1);
+}
+
+.pay-btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pay-title {
+  font-size: 32rpx;
+  color: rgba(44, 34, 24, 1);
+  margin: 0 0 12rpx;
+  font-weight: bold;
+}
+
+.pay-desc {
+  font-size: 22rpx;
+  color: rgba(44, 34, 24, 1);
+}
+
+.icon {
+  position: absolute;
+  top: 45rpx;
+  right: 25rpx;
+}
+
+.btn-author {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 702rpx;
+  height: 116rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 24rpx auto 0;
+  border-radius: 10rpx;
+  color: rgb(255, 255, 255);
+  background-color: rgba(6, 193, 95, 1);
+}
+
+.author-desc {
+  display: flex;
+  align-items: center;
+  margin: 22rpx auto 0;
+  justify-content: center;
+  color: RGBA(102, 102, 102, 1);
+}
+
+.author-desc text {
+  font-size: 28rpx;
+  font-family: regular;
+  color: rgb(102, 102, 102);
+}
+
+.author-bar {
+  padding: 0 6rpx;
+}
+.band-btn {
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 268rpx;
+	height: 80rpx;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+	color: rgba(44, 34, 24, 1);
+	background-color: rgba(255, 201, 26, 1);
+}

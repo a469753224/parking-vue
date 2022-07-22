@@ -1,0 +1,11 @@
+<!--pages/users/rechargeRecord/rechargeRecord.wxml-->
+<view class="cell" wx:for="{{[1,2,3,4,5]}}" wx:key="index" wx:for-item="item">
+    <view class="title">
+        <text class="desc">充值</text>
+        <text class="date">2020-11-25 13:28</text>
+    </view>
+    <view class="right">
+        <text class="money">+50.00</text>
+        <image class="crow-left" src="/assets/images/icon/crow_left@2x.png"/>
+    </view>
+</view>

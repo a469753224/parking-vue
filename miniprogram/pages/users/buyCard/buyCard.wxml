@@ -1,0 +1,15 @@
+<view class="container">
+  <view wx:for="{{parkCardType}}" wx:key="index" data-id="{{item.id}}" data-active="{{index}}" class="item {{index === active ? 'active' : ''}}" bindtap="choose">
+    <buy-card cardData="{{item}}"/>
+  </view>
+</view>
+
+<view class="btn-group">
+  <view class="pay">
+    <text class="pay-sign">￥</text>
+    <text class="pay-number">29.99</text>
+  </view>
+  <text class="btn" bindtap="shop">购买</text>
+</view>
+
+<tips title="{{currentData.name}}" content="限榴车位平台合作停车位使用，{{currentData.name}}，{{currentData.rules}}，限{{currentData.area}}使用。" confirmText="我知道了" showCancel="{{false}}" show="{{status}}" bind:confirm="confirm" />

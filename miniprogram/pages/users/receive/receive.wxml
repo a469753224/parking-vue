@@ -1,0 +1,14 @@
+<view class="warrp" wx:if="{{coupons.length > 0}}">
+	<view class="list" wx:for="{{coupons}}" wx:key="index">
+		<coupon-card row="{{item}}">
+			<block wx:if="{{item.state == 1 }}">
+				<block wx:if="{{item.receive == 0}}">
+					<text class="{{item.couponType == 1 ? 'yellow' : 'green'}} btn" data-id="{{item.couponId}}" bindtap="receiveCoupon">领取</text>
+				</block>
+			</block>
+		</coupon-card>
+	</view>
+</view>
+<block wx:else>
+	<van-empty description="暂无优惠券" />
+</block>

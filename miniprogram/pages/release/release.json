@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "countdown": "../../components/modal/countdown/index",
+    "park-timeout": "../../components/modal/parkTimeout/index",
+    "timeout": "../../components/modal/timeout/timeout"
+  },
+  "navigationBarTitleText": "车位发布"
+}

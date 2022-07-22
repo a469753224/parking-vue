@@ -1,0 +1,19 @@
+<view class="card">
+  <view class="title-warp">
+    <text class="title" wx:if="{{car.days > 0}}">停车卡 {{car.days}} 天</text>
+    <text class="title" wx:else>停车卡</text>
+    <text wx:if="{{car.status != 1}}">购卡停车更划算</text>
+    <text wx:if="{{car.status == 1}}">有效期{{car.endTime}}</text>
+    <!-- <text class="term" wx:if="{{car.type == 0}}">{{rules}}次/天</text> -->
+    <text class="term" wx:if="{{car.timesRemain > 0}}">剩余{{car.timesRemain}}次</text>
+  </view>
+  <view class="single" wx:if="{{car.allowance}}">
+    <view class="money">
+      <text>{{car.allowance}}</text>
+      <text>元</text>
+    </view>
+    <text class="descc">单次抵扣</text>
+  </view>
+  <text wx:if="{{false}}" class="btn" data-id="{{0}}" bindtap="byParkCard">购买</text>
+  <text wx:if="{{false}}" class="btn" data-id="{{0}}" bindtap="byParkCard">续费</text>
+</view>

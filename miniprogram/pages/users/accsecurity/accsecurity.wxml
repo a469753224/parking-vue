@@ -1,0 +1,25 @@
+<!--pages/users/accsecurity/accsecurity.wxml-->
+
+<view class="cell tool-name">
+	<text>手机号码</text>
+	<text wx:if="{{token}}" class="{{!user.phone?'orange':''}}" bindtap="bindPhone">{{user.phone?user.phone:'前往绑定'}}</text>
+</view>
+
+<view class="tools">
+	<view class="cell" bindtap="setPassword">
+		<text class="title">登录密码</text>
+		<view class="right" bindtap="setpassword">
+			<text class="{{logpassword?'grey':'orange'}}">{{logpassword?'修改':'未设置'}}</text>
+			<image src="/assets/images/icon/crow_left@2x.png" class="icon-crow"/>
+		</view>
+	</view>
+	<view class="cell" bindtap="setPayPass">
+		<text class="title">支付密码</text>
+		<view class="right">
+			<text class="{{paypassword?'grey':'orange'}}">{{paypassword?'修改':'未设置'}}</text>
+			<image src="/assets/images/icon/crow_left@2x.png" class="icon-crow"/>
+		</view>
+	</view>
+</view>
+
+<tips content="{{content}}" showCancel="{{false}}" show="{{show}}"/>

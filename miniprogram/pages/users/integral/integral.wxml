@@ -1,0 +1,6 @@
+<!--pages/users/integral/integral.wxml-->
+<view class="itegral">
+    <image class="integra-lempty" src="/assets/images/user/integra_lempty@2x.png"/>
+    <text>该功能即将开放</text>
+    <text>敬请期待</text>
+</view>

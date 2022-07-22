@@ -1,0 +1,44 @@
+page {
+	padding: 24rpx 0 0;
+	box-sizing: border-box;
+	background-color: rgba(245, 245, 245, 1);
+}
+
+.van-checkbox {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 96rpx;
+	width: 100vw;
+	font-size: 30rpx;
+	padding: 0rpx 24rpx;
+	box-sizing: border-box;
+	color: rgba(51, 51, 51, 1);
+	background-color: rgb(255,255,255);
+	border-bottom: 2rpx solid rgba(245, 245, 245, 1);
+}
+
+.van-checkbox__label {
+	width: 100%;
+}
+
+.btn-group {
+	position: fixed;
+	bottom: 48rpx;
+	left: 0;
+	width: 100%;
+	height: 96rpx;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 702rpx;
+	height: 96rpx;
+	margin: 0 24rpx;
+	font-size: 32rpx;
+	color: rgba(43, 34, 24, 1);
+	border-radius: 10rpx;
+	background-color: rgba(255, 201, 26, 1);
+}

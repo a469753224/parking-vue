@@ -1,0 +1,172 @@
+page {
+  background-color: rgb(255,255,255) !important;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70rpx;
+  padding: 0 24rpx;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox text {
+  margin: 0 20rpx 0 0;
+}
+
+.car-no {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16rpx;
+}
+
+.car-no text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90rpx;
+  height: 94rpx;
+  border-radius: 10rpx;
+  font-size: 40rpx;
+  margin: 0 4rpx;
+  border: 1rpx solid rgb(240, 240, 240);
+  box-shadow: 2rpx 2rpx 5rpx 0 rgba(0,0,0,.15);
+}
+
+.car-no text.active {
+  border-color: rgba(255, 201, 26, 1);
+}
+
+.car-no text:nth-child(2) {
+  margin: 0 20rpx 0 4rpx;
+}
+
+.set-default {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 44rpx;
+  margin: 44rpx 0;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+
+.set-default text {
+  margin: -8rpx 20rpx 0;
+}
+
+.car-keyboard {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 777;
+  width: 100%;
+  height: 400rpx;
+  padding: 5rpx 0;
+  transition: .5s all;
+  box-sizing: border-box;
+  background-color: rgb(240, 240, 240);
+}
+
+.car-keyboard.hides {
+  bottom: -360rpx;
+}
+
+.car-keyboard text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70rpx;
+  width: 64rpx;
+  margin: 0 5rpx;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+  color: rgb(0, 0, 0, );
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2rpx 5rpx 0 rgba(0, 0, 0, 0.2);
+}
+
+.car-keyboard text.disbale {
+  color: rgb(153,153,153);
+  background-color: rgb(245,245,245);
+}
+
+.car-keyboard text:active {
+  background-color: rgb(220, 220, 220);
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 720rpx;
+  margin: 15rpx auto;
+}
+
+.col-btm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 720rpx;    
+  height: 72rpx;
+  margin: 0 auto;
+}
+
+.col-lum {
+  display: flex;
+  align-items: center;
+}
+
+.backspace {
+  width: 50rpx;
+  height: 40rpx;
+}
+
+.btn-group {
+  /* position: fixed;
+  bottom: 48rpx;
+  left: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 96rpx;
+}
+
+.delete,.car-keyboard .more,.car-keyboard .confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70rpx;
+  width: 90rpx;
+  margin: 0 5rpx;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+  color: rgb(0, 0, 0, );
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2rpx 5rpx 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-group text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 702rpx;
+  height: 96rpx;
+  border: none;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  color: rgba(163, 151, 113, 1);
+  background-color: rgba(255, 225, 128, 1);
+}
+
+.btn-group text.active {
+  color: rgba(43, 34, 24, 1);
+  background-color: rgba(255, 201, 26, 1);
+}

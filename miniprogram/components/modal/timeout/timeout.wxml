@@ -1,0 +1,13 @@
+<!--components/modal/timeout/timeout.wxml-->
+<view class="timeout" wx:if="{{show}}">
+    <view class="timeout-container">
+        <image class="clock" src="{{clock}}"/>
+        <text class="title">离取车时间还有15分钟</text>
+        <text class="tips">您预留的取车时间为15:30，现在离取车时间还有15分钟，如需续时，请进入订单选择新的取车时间</text>
+        <view class="btn-group">
+            <text class="grey" bindtap="toOrder">进入订单</text>
+            <text class="orange" bindtap="cancel">我知道了</text>
+        </view>
+    </view>
+</view>
+

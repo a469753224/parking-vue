@@ -1,0 +1,36 @@
+<view class="car-back">
+    <image src="/assets/images/user/car@2x.png" />
+    <text class="tips">*为不妨碍您的出行，提交车辆信息务必真实有效</text>
+</view>
+
+<view class="car-list">
+
+    <view class="empty" wx:if="{{cars.length == 0}}">
+        <van-empty image="" description="暂无车辆" />
+    </view>
+
+    <view class="cell" wx:for="{{cars}}" wx:key="index" wx:for-item="item">
+        <van-swipe-cell right-width="{{ 108 }}">
+            <view class="left" solt="left" data-row="{{item}}" bindtap="selectPlate">
+                <view class="car-info">
+                    <image class="car-icon" src="/assets/images/user/car_icon@2x.png" />
+                    <text class="car-first">{{item.proCity}}</text>
+                    <text class="car-no">{{item.number}}</text>
+                </view>
+                <text wx:if="{{item.status == 1}}" class="default-icon">默认</text>
+            </view>
+            <view slot="right" class="right">
+                <text class="set-default" data-id="{{item.id}}" bindtap="setDefault">设为默认</text>
+                <text class="detele-car" data-id="{{item.id}}" bindtap="showModal">删除</text>
+            </view>
+        </van-swipe-cell>
+    </view>
+
+</view>
+
+<view class="btn-group">
+    <text bindtap="addCar">添加车辆</text>
+</view>
+
+<tips content="您确定要删除该车牌号码？" bind:confirm="deletePlate" show="{{showDetele}}"/>
+<tips content="添加车辆请移步“榴车位APP”内操作，目前小程序只提供扫码解锁服务，感谢您的理解！" showCancel="{{false}}" show="{{show}}"/>

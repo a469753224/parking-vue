@@ -1,0 +1,60 @@
+<view class="user-card">
+    <view class="card">
+        <view class="card-top">
+            <text class="card-title">埌东五组006</text>
+            <view class="place-rent">
+                <text>累计收益(元)</text>
+                <text class="place-money">963.00</text>
+            </view>
+        </view>
+        <view class="gird">
+            <view class="gird-item">
+                <view class="view">
+                    <view class="name">
+                        <text>今日单量(单)</text>
+                    </view>
+                    <text class="number">18</text>
+                </view>
+                <view class="view">
+                    <view class="name">
+                        <text>今日收益(元)</text>
+                    </view>
+                    <text class="number">382.00</text>
+                </view>
+            </view>
+            <view class="month">
+                <view class="name">
+                    <text>本月收益(元)</text>
+                </view>
+                <text class="number">882.00</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<text class="title">分账比例</text>
+
+<view class="card-container">
+    <text class="split-account">此车位分账比例</text>
+    <view class="card-bar">
+        <image class="avatar-image" src="/assets/images/user/avatar_default@2x.png"/>
+        <view class="item-desc">
+            <text class="avatar-name">榴车位</text>
+            <text class="avatar-desc">分账比例40%</text>
+        </view>
+    </view>
+    <view class="card-bar">
+        <image class="avatar-image" src="/assets/images/user/park-owner@2x.png"/>
+        <view class="item-desc">
+            <text class="avatar-name">车位主</text>
+            <text class="avatar-desc">分账比例50%</text>
+        </view>
+    </view>
+    <view class="card-bar">
+        <image class="avatar-image" src="/assets/images/user/park-property@2x.png"/>
+        <view class="item-desc">
+            <text class="avatar-name">物业</text>
+            <text class="avatar-desc">分账比例10%</text>
+        </view>
+    </view>
+</view>

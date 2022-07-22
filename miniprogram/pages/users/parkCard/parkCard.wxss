@@ -1,0 +1,35 @@
+page {
+  padding: 20rpx 0;
+  background-color: rgb(255,255,255) !important;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 30rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.empty image {
+  width: 192rpx;
+  height: 192rpx;
+}
+
+.tips {
+  display: flex;
+  width: 654rpx;
+  margin: 0 auto;
+  padding: 16rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  color: rgba(153, 153, 153, 1);
+  background-color: rgb(240, 240, 240);
+}
+
+.item {
+  margin: 0 0 24rpx;
+}

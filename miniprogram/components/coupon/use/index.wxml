@@ -1,0 +1,29 @@
+<view class="container {{row.type == 1 ? 'yellow' : 'green'}}">
+	<view class="header {{row.type == 1 ? 'yellow-back' : 'green-back'}}">
+		<text class="title">{{row.stoName}}</text>
+		<view class="date-type">
+			<text>有效期：{{row.beginTime}}-{{row.endTime}}</text>
+			<text>{{row.type == 1 ? '满减券' : '折扣券'}}</text>
+		</view>
+	</view>
+	<view class="content">
+		<text class="discount">{{row.type == 1 ? '金额' : '折扣'}}</text>
+		<text class="number">{{row.usedAmount}}</text>
+		<text class="currency">{{row.use}}</text>
+	</view>
+	<view class="tips">
+		<text class="tips-title">使用说明</text>
+		<view class="li">
+			<text class="label">·券编号:</text>
+			<text>{{row.couponNumber}}</text>
+		</view>
+		<view class="li">
+			<text class="label">·商家电话:</text>
+			<text>{{row.stoPhone}}</text>
+		</view>
+		<view class="li">
+			<text class="label">·门店地址:</text>
+			<text>{{row.stoAddr}}</text>
+		</view>
+	</view>
+</view>

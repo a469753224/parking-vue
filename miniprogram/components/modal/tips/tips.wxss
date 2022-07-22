@@ -1,0 +1,85 @@
+/* components/modal/tips/tips.wxss */
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7777;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,.25);
+}
+
+.tips {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 606rpx;
+	min-height: 308rpx;
+	border-radius: 20rpx;
+	padding: 40rpx 24rpx 24rpx;
+	box-sizing: border-box;
+	animation-name: tips;
+	animation-duration: .15s;
+	background-color: rgb(255,255,255);
+}
+
+@keyframes tips {
+	0%{
+		transform: scale(.9);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+.title {
+	font-size: 32rpx;
+	color: rgba(51, 51, 51, 1);
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 28rpx;
+	color: rgba(153, 153, 153, 1);
+	margin: 40rpx 0;
+	line-height: 48rpx;
+}
+
+.btn-group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 268rpx;
+	height: 80rpx;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+}
+
+.cancel {
+	margin: 0 24rpx 0 0;
+	color: rgba(51, 51, 51, 1);
+	background-color: rgba(245, 245, 245, 1);
+}
+
+.confirm {
+	color: rgba(44, 34, 24, 1);
+	background-color: rgba(255, 201, 26, 1);
+}
+
+
+

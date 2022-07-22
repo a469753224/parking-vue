@@ -1,0 +1,22 @@
+<!--pages/users/bindhone/bindphone.wxml-->
+
+<text class="title">绑定手机号</text>
+
+<text class="desc">绑定手机号，让您的账号更安全，完成绑定后，您可通过手机号码登录榴车位</text>
+
+<form>
+
+    <view class="cell">
+        <input type="number" value="{{phone}}" placeholder="请输入手机号" bind:input="onChangePhone"/>
+    </view>
+
+    <view class="cell">
+        <input type="number" value="{{code}}" placeholder="请输入验证码" bind:input="onChangeCode"/>
+        <text class="code">获取验证码</text>
+    </view>
+
+    <view class="btn-group">
+        <text class="{{phone&&code?'active':''}}">下一步</text>
+    </view>
+
+</form>

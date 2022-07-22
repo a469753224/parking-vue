@@ -1,0 +1,29 @@
+<view class="cell tool-name" bindtap="accsecurity">
+	<text>账号与安全</text>
+	<van-icon name="arrow" color="rgba(153, 153, 153, 1)" size="28rpx"/>
+</view>
+
+<!-- <view class="cell tool-name" bindtap="authorTools">
+	<text>授权管理</text>
+	<van-icon name="arrow" color="rgba(153, 153, 153, 1)" size="28rpx"/>
+</view> -->
+
+<view class="tools">
+	<view class="cell" bindtap="removeStorage">
+		<text class="title">清除缓存</text>
+	</view>
+	<view class="cell" bindtap="aboutus">
+		<text class="title">关于我们</text>
+		<van-icon name="arrow" color="rgba(153, 153, 153, 1)" size="28rpx"/>
+	</view>
+	<view class="cell" bindtap="feekback">
+		<text class="title">意见反馈</text>
+		<van-icon name="arrow" color="rgba(153, 153, 153, 1)" size="28rpx"/>
+	</view>
+</view>
+
+<view class="btn-group">
+	<text class="btn" bindtap="logout">退出登录</text>
+</view>
+
+<tips content="账户与安全设置请移步“榴车位APP”内操作，目前小程序不提供该服务，感谢您的理解！" showCancel="{{false}}" show="{{show}}"/>

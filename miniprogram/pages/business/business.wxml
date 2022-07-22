@@ -1,0 +1,11 @@
+<!--pages/business/business.wxml-->
+<view>
+ 
+  <view class="banner">
+    <swiper autoplay="{{true}}" interval="{{5000}}" duration="{{650}}" circular="{{true}}">
+      <swiper-item wx:for="{{banner}}" wx:key="index" wx:for-item="item">
+        <image src="{{item}}" />
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

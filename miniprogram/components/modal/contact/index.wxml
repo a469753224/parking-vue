@@ -1,0 +1,13 @@
+<!--components/modal/contact/index.wxml-->
+<view class="contact" wx:if="{{show}}">
+
+    <view class="container">
+        <text class="title">提示</text>
+        <text class="tips">确定要拨打电话:{{tel}}吗？</text>
+        <view class="btn-group">
+            <text class="btn cancel" bindtap="cancel">取消</text>
+            <text class="btn confirm" bindtap="confirm">确定</text>
+        </view>
+    </view>
+
+</view>

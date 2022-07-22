@@ -1,0 +1,135 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/user/user",
+    "pages/business/business",
+    "pages/release/release",
+    "pages/homes/pay/pay",
+    "pages/homes/fail/fail",
+    "pages/homes/scan/scan",
+    "pages/homes/order/order",
+    "pages/homes/search/search",
+    "pages/homes/reserve/reserve",
+    "pages/homes/success/success",
+    "pages/homes/keepPark/keepPark",
+    "pages/homes/websockit/websockit",
+    "pages/homes/parkDetail/parkDetail",
+    "pages/homes/safeconduct/safeconduct",
+    "pages/homes/refundApply/refundApply",
+    "pages/homes/refundDetail/refundDetail",
+    "pages/homes/cancelOrder/cancelOrder",
+    "pages/homes/modifyPassword/modifyPassword",
+    "pages/homes/successSettlement/successSettlement",
+    "pages/releases/step/step",
+    "pages/releases/apply/apply",
+    "pages/releases/unlock/unlock",
+    "pages/releases/repeat/repeat",
+    "pages/releases/settime/settime",
+    "pages/releases/myParks/myParks",
+    "pages/releases/myApply/myApply",
+    "pages/releases/position/position",
+    "pages/releases/placeRent/placeRent",
+    "pages/sigup/accunt/accunt",
+    "pages/sigup/register/register",
+    "pages/users/wallet/wallet",
+    "pages/users/setup/setup",
+    "pages/users/record/record",
+    "pages/users/coupon/coupon",
+    "pages/users/myCars/myCars",
+    "pages/users/addCar/addCar",
+    "pages/users/receive/receive",
+    "pages/users/balance/balance",
+    "pages/users/aboutus/aboutus",
+    "pages/users/integral/integral",
+    "pages/users/parkCard/parkCard",
+    "pages/users/buyCard/buyCard",
+    "pages/users/feedback/feedback",
+    "pages/users/bindhone/bindphone",
+    "pages/users/useCoupon/useCoupon",
+    "pages/users/reveExpen/reveExpen",
+    "pages/users/withdrawal/withdrawal",
+    "pages/users/authorTools/authorTools",
+    "pages/users/accsecurity/accsecurity",
+    "pages/users/orderDetail/orderDetail",
+    "pages/users/setpassword/setpassword",
+    "pages/users/rechargeDetail/rechargeDetail",
+    "pages/users/rechargeRecord/rechargeRecord",
+    "pages/tests/orderDetail/orderDetail",
+    "pages/tests/test/test"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于定位您当前的位置以匹配停车场位置"
+    }
+  },
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.6",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#FFC919",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/images/tabbar/home_default@2x.png",
+        "selectedIconPath": "assets/images/tabbar/home_active@2x.png"
+      },
+      {
+        "pagePath": "pages/business/business",
+        "text": "商城",
+        "iconPath": "assets/images/tabbar/business_default@2x.png",
+        "selectedIconPath": "assets/images/tabbar/business_active@2x.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "assets/images/tabbar/user_default@2x.png",
+        "selectedIconPath": "assets/images/tabbar/user_active@2x.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-switch": "./miniprogram_npm/@vant/weapp/switch/index",
+    "van-radio": "./miniprogram_npm/@vant/weapp/radio/index",
+    "van-radio-group": "./miniprogram_npm/@vant/weapp/radio-group/index",
+    "van-popup": "./miniprogram_npm/@vant/weapp/popup/index",
+    "van-icon": "./miniprogram_npm/@vant/weapp/icon/index",
+    "van-cell": "./miniprogram_npm/@vant/weapp/cell/index",
+    "van-search": "./miniprogram_npm/@vant/weapp/search/index",
+    "van-button": "./miniprogram_npm/@vant/weapp/button/index",
+    "van-overlay": "./miniprogram_npm/@vant/weapp/overlay/index",
+    "van-steps": "./miniprogram_npm/@vant/weapp/steps/index",
+    "van-swipe-cell": "./miniprogram_npm/@vant/weapp/swipe-cell/index",
+    "van-count-down": "./miniprogram_npm/@vant/weapp/count-down/index",
+    "van-tab": "./miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "./miniprogram_npm/@vant/weapp/tabs/index",
+    "van-empty": "./miniprogram_npm/@vant/weapp/empty/index",
+    "van-checkbox": "./miniprogram_npm/@vant/weapp/checkbox/index",
+    "van-checkbox-group": "./miniprogram_npm/@vant/weapp/checkbox-group/index",
+    "van-cell-group": "./miniprogram_npm/@vant/weapp/cell-group/index",
+    "tips": "./components/modal/tips/tips",
+    "contact": "/components/modal/contact/index",
+    "coupon-card": "/components/coupon/card/index",
+    "coupon": "/components/coupon/coupon/index",
+    "use-coupon": "/components/coupon/use/index",
+    "wallet-card": "/components/wallet/card/index",
+    "buy-card": "/components/wallet/buy-card/index"
+  }
+}

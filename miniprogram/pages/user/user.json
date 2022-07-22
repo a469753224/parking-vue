@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor": "#FFDE3C",
+  "usingComponents": {
+    "countdown": "../../components/modal/countdown/index"
+  }
+}

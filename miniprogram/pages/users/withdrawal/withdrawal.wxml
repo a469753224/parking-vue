@@ -1,0 +1,32 @@
+<view class="withdrawal">
+    <view class="way">
+        <text>提现至</text>
+        <view class="way-image">
+            <image src="/assets/images/icon/wechat@2x.png" />
+            <text>微信零钱</text>
+        </view>
+    </view>
+    <view class="input">
+        <text>提现金额(满100元可提现)</text>
+        <view class="flid">
+            <text class="sign">￥</text>
+            <input type="number" placeholder="100元起步" model:value="{{number}}"/>
+        </view>
+    </view>
+    <view class="available-balance" wx:if="{{number <= blance.blance}}">
+        <text class="orange">可提现余额：￥{{blance.blance}}，</text>
+        <text class="green" bindtap="withAll" data-blance="{{blance.blance}}">全部提现</text>
+    </view>
+    <view class="available-balance" wx:if="{{number > blance.blance}}">
+        <text class="orange">输入金额已超过可提现金额</text>
+    </view>
+    <text class="btn">确认提现</text>
+</view>
+
+<view class="ruls">
+    <text class="ruls-title">提现规则</text>
+    <view class="ruls-desc">
+        <text>1.只能提整数部分，小数部分可累计到下次提现；</text>
+        <text>2.满100元可提现，仅支持提现至微信零钱。</text>
+    </view>
+</view>

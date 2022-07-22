@@ -1,0 +1,7 @@
+.banner {
+    position: relative;
+    width: 702rpx;
+    height: 140rpx;
+    margin: 24rpx auto;
+    z-index: 7;
+}

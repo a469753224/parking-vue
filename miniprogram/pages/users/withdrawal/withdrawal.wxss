@@ -1,0 +1,107 @@
+.withdrawal {
+    width: 702rpx;
+    margin: 24rpx;
+    border-radius: 20rpx;
+    padding: 0 0 48rpx;
+    background-color: rgb(255,255,255);
+}
+
+.way {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26rpx 0 26rpx;
+    margin: 0 24rpx;
+    font-size: 30rpx;
+    color: rgba(51, 51, 51, 1);
+    border-bottom: 2rpx solid rgba(230, 230, 230, 1);
+}
+
+.way image {
+    width: 48rpx;
+    height: 48rpx;
+    margin: 0 8rpx 0 0;
+}
+
+.way-image {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 26rpx 0 20rpx;
+    margin: 0 24rpx;
+    font-size: 30rpx;
+    height: 176rpx;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid rgba(230, 230, 230, 1);
+}
+
+.flid {
+    display: flex;
+    align-items: center;
+}
+
+.sign {
+    font-size: 40rpx;
+    margin: 0 20rpx 0 0;
+}
+
+.flid input {
+    font-size: 48rpx;
+}
+
+.available-balance {
+    display: flex;
+    align-items: center;
+    height: 96rpx;
+    font-size: 26rpx;
+    padding: 0 24rpx;
+}
+
+.orange {
+    color: rgba(255, 83, 26, 1);
+}
+
+.green {
+    color: rgba(72, 199, 139, 1);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 654rpx;
+    height: 96rpx;
+    font-size: 32rpx;
+    border-radius: 10rpx;
+    margin: 64rpx auto 0;
+    color: rgba(43, 34, 24, 1);
+    background-color: rgba(255, 201, 26, 1);
+}
+
+.ruls {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20rpx;
+    margin: 48rpx 24rpx 0;
+    padding: 0 0 24rpx;
+    background-color: rgb(255,255,255);
+}
+
+.ruls-title {
+    padding: 26rpx 24rpx;
+    font-size: 32rpx;
+    color: rgba(51, 51, 51, 1);
+}
+
+.ruls-desc {
+    display: flex;
+    flex-direction: column;
+    font-size: 26rpx;
+    padding: 0 24rpx;
+    color: rgba(153, 153, 153, 1);
+}

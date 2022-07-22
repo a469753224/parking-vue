@@ -1,0 +1,11 @@
+<!--components/modal/timeout/index.wxml-->
+<view class="timeout" wx:if="{{show}}">
+    <view class="timeout-container">
+        <image class="clock" src="{{clock}}"/>
+        <text class="title">您已超出车位开放时间，请尽快取回车辆</text>
+        <text class="tips">*超出车位开放时间的部分按单价的2倍收取</text>
+        <view class="btn-group">
+            <text class="orange" bindtap="cancel">我知道了</text>
+        </view>
+    </view>
+</view>

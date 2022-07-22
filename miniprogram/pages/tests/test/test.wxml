@@ -1,0 +1,4 @@
+<view class="clum">
+  <text>登录测试</text>
+  <van-button bindtap="login">点击登录</van-button>
+</view>

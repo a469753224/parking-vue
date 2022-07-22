@@ -1,0 +1,8 @@
+<view class="overlay" wx:if="{{show}}">
+	<view class="warrp">
+		<image class="image" src="/assets/images/user/coupon.png" bindtap="getCoupon"/>
+		<view class="close-warrp">
+			<van-icon bindtap="close" name="close" class="close" size="58rpx" color="rgb(255,255,255)"/>
+		</view>
+	</view>
+</view>

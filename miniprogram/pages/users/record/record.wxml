@@ -1,0 +1,44 @@
+<block wx:if="{{underwayFlag}}">
+
+	<view class="title">
+		<text>进行中的订单</text>
+	</view>
+
+	<view class="order-card" data-row="{{underway}}" bindtap="toOrder">
+		<text>停车费用(￥)</text>
+		<text class="order-number">{{underway.currentExpenses}}</text>
+		<text class="order-time">{{underway.total}}</text>
+		<text>停车时长</text>
+	</view>
+
+</block>
+
+<view class="title">
+	<text>历史订单</text>
+</view>
+
+<block wx:if="{{order.length > 0}}">
+	<van-swipe-cell right-width="{{84}}" wx:for="{{order}}" wx:key="index" wx:for-item="item">
+		<view class="cell" solt="left" data-row="{{item}}" bindtap="orderDetail">
+			<view class="info">
+				<view class="status">
+					<text class="pay-money">￥{{item.price}}</text>
+					<text class="desc" wx:if="{{item.state == 3}}">未支付</text>
+				</view>
+				<text class="pay-date">{{item.beginDate}}~{{item.endDate}}</text>
+				<text class="pay-address">{{item.placeAddress}}{{item.street}}</text>
+			</view>
+			<text class="{{item.state == 4 ? 'grey' : item.state == 3 ? 'pay-btn' : 'reserve'}}" data-row="{{item}}"
+				catchtap="pay">{{item.status}}</text>
+		</view>
+		<view slot="right" class="right" data-id="{{item.orderId}}" bindtap="deleteOrder">
+			<text class="detele-car">删除</text>
+		</view>
+	</van-swipe-cell>
+</block>
+<block wx:else>
+	<van-empty description="暂无订单" />
+</block>
+
+<tips content="确定删除订单？" show="{{show}}" currentId="{{currentId}}" bind:confirm="confirm" />
+<tips content="预留车位请移步“榴车位APP”内操作，目前小程序只提供扫码解锁服务，感谢您的理解！" showCancel="{{false}}" show="{{shows}}" />
